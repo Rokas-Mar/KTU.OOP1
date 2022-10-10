@@ -41,5 +41,10 @@ namespace LD2.LAB
         {
             return AllHouses[index];
         }
+
+        public DateTime GetIndexedDate(int index)
+        {
+            return AllHouses[index].BuildDate;
+        }
     }
 }
