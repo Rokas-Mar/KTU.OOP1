@@ -1,0 +1,10 @@
+D:\Rokas M\LD2\LD2.Register.Step4\bin\Debug\Dogs.csv
+D:\Rokas M\LD2\LD2.Register.Step4\bin\Debug\Vaccinations.csv
+D:\Rokas M\LD2\LD2.Register.Step4\bin\Debug\LD2.Register.Step4.exe.config
+D:\Rokas M\LD2\LD2.Register.Step4\bin\Debug\LD2.Register.Step4.exe
+D:\Rokas M\LD2\LD2.Register.Step4\bin\Debug\LD2.Register.Step4.pdb
+D:\Rokas M\LD2\LD2.Register.Step4\obj\Debug\LD2.Register.Step4.csproj.AssemblyReference.cache
+D:\Rokas M\LD2\LD2.Register.Step4\obj\Debug\LD2.Register.Step4.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\LD2\LD2.Register.Step4\obj\Debug\LD2.Register.Step4.csproj.CoreCompileInputs.cache
+D:\Rokas M\LD2\LD2.Register.Step4\obj\Debug\LD2.Register.Step4.exe
+D:\Rokas M\LD2\LD2.Register.Step4\obj\Debug\LD2.Register.Step4.pdb

@@ -1,0 +1,9 @@
+D:\Rokas M\Classes\Lab1.Excercises.Register3\bin\Debug\Dogs.csv
+D:\Rokas M\Classes\Lab1.Excercises.Register3\bin\Debug\Lab1.Excercises.Register3.exe.config
+D:\Rokas M\Classes\Lab1.Excercises.Register3\bin\Debug\Lab1.Excercises.Register3.exe
+D:\Rokas M\Classes\Lab1.Excercises.Register3\bin\Debug\Lab1.Excercises.Register3.pdb
+D:\Rokas M\Classes\Lab1.Excercises.Register3\obj\Debug\Lab1.Excercises.Register3.csproj.AssemblyReference.cache
+D:\Rokas M\Classes\Lab1.Excercises.Register3\obj\Debug\Lab1.Excercises.Register3.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\Classes\Lab1.Excercises.Register3\obj\Debug\Lab1.Excercises.Register3.csproj.CoreCompileInputs.cache
+D:\Rokas M\Classes\Lab1.Excercises.Register3\obj\Debug\Lab1.Excercises.Register3.exe
+D:\Rokas M\Classes\Lab1.Excercises.Register3\obj\Debug\Lab1.Excercises.Register3.pdb

@@ -1,0 +1,8 @@
+D:\Rokas M\Introduction\Introduction.If.Step2\bin\Debug\Introduction.If.Step2.exe.config
+D:\Rokas M\Introduction\Introduction.If.Step2\bin\Debug\Introduction.If.Step2.exe
+D:\Rokas M\Introduction\Introduction.If.Step2\bin\Debug\Introduction.If.Step2.pdb
+D:\Rokas M\Introduction\Introduction.If.Step2\obj\Debug\Introduction.If.Step2.csproj.AssemblyReference.cache
+D:\Rokas M\Introduction\Introduction.If.Step2\obj\Debug\Introduction.If.Step2.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\Introduction\Introduction.If.Step2\obj\Debug\Introduction.If.Step2.csproj.CoreCompileInputs.cache
+D:\Rokas M\Introduction\Introduction.If.Step2\obj\Debug\Introduction.If.Step2.exe
+D:\Rokas M\Introduction\Introduction.If.Step2\obj\Debug\Introduction.If.Step2.pdb

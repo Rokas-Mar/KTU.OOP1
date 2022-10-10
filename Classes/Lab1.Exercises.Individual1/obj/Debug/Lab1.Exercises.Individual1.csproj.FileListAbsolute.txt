@@ -1,0 +1,18 @@
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Individual1\bin\Debug\Lab1.Exercises.Individual1.exe.config
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Individual1\bin\Debug\Lab1.Exercises.Individual1.exe
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Individual1\bin\Debug\Lab1.Exercises.Individual1.pdb
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Individual1\obj\Debug\Lab1.Exercises.Individual1.csproj.AssemblyReference.cache
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Individual1\obj\Debug\Lab1.Exercises.Individual1.csproj.SuggestedBindingRedirects.cache
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Individual1\obj\Debug\Lab1.Exercises.Individual1.csproj.CoreCompileInputs.cache
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Individual1\obj\Debug\Lab1.Exercises.Individual1.exe
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Individual1\obj\Debug\Lab1.Exercises.Individual1.pdb
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Individual1\bin\Debug\Tourists.csv
+D:\Rokas M\Classes\Lab1.Exercises.Individual1\bin\Debug\Tourists.csv
+D:\Rokas M\Classes\Lab1.Exercises.Individual1\bin\Debug\Lab1.Exercises.Individual1.exe.config
+D:\Rokas M\Classes\Lab1.Exercises.Individual1\bin\Debug\Lab1.Exercises.Individual1.exe
+D:\Rokas M\Classes\Lab1.Exercises.Individual1\bin\Debug\Lab1.Exercises.Individual1.pdb
+D:\Rokas M\Classes\Lab1.Exercises.Individual1\obj\Debug\Lab1.Exercises.Individual1.csproj.AssemblyReference.cache
+D:\Rokas M\Classes\Lab1.Exercises.Individual1\obj\Debug\Lab1.Exercises.Individual1.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\Classes\Lab1.Exercises.Individual1\obj\Debug\Lab1.Exercises.Individual1.csproj.CoreCompileInputs.cache
+D:\Rokas M\Classes\Lab1.Exercises.Individual1\obj\Debug\Lab1.Exercises.Individual1.exe
+D:\Rokas M\Classes\Lab1.Exercises.Individual1\obj\Debug\Lab1.Exercises.Individual1.pdb

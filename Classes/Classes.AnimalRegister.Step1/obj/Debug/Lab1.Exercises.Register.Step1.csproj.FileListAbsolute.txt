@@ -1,0 +1,8 @@
+D:\KTU Objektinis Programavimas\Classes\Classes.AnimalRegister.Step1\obj\Debug\Lab1.Exercises.Register.Step1.csproj.AssemblyReference.cache
+D:\KTU Objektinis Programavimas\Classes\Classes.AnimalRegister.Step1\obj\Debug\Lab1.Exercises.Register.Step1.csproj.SuggestedBindingRedirects.cache
+D:\KTU Objektinis Programavimas\Classes\Classes.AnimalRegister.Step1\obj\Debug\Lab1.Exercises.Register.Step1.csproj.CoreCompileInputs.cache
+D:\KTU Objektinis Programavimas\Classes\Classes.AnimalRegister.Step1\obj\Debug\Classes.AnimalRegister.Step1.exe
+D:\KTU Objektinis Programavimas\Classes\Classes.AnimalRegister.Step1\obj\Debug\Classes.AnimalRegister.Step1.pdb
+D:\KTU Objektinis Programavimas\Classes\Classes.AnimalRegister.Step1\bin\Debug\Classes.AnimalRegister.Step1.exe.config
+D:\KTU Objektinis Programavimas\Classes\Classes.AnimalRegister.Step1\bin\Debug\Classes.AnimalRegister.Step1.exe
+D:\KTU Objektinis Programavimas\Classes\Classes.AnimalRegister.Step1\bin\Debug\Classes.AnimalRegister.Step1.pdb

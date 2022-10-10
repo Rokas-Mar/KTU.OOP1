@@ -1,0 +1,8 @@
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Methods.Step2\bin\Debug\Introduction.Methods.Step2.exe.config
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Methods.Step2\bin\Debug\Introduction.Methods.Step2.exe
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Methods.Step2\bin\Debug\Introduction.Methods.Step2.pdb
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Methods.Step2\obj\Debug\Introduction.Methods.Step2.csproj.AssemblyReference.cache
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Methods.Step2\obj\Debug\Introduction.Methods.Step2.csproj.SuggestedBindingRedirects.cache
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Methods.Step2\obj\Debug\Introduction.Methods.Step2.csproj.CoreCompileInputs.cache
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Methods.Step2\obj\Debug\Introduction.Methods.Step2.exe
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Methods.Step2\obj\Debug\Introduction.Methods.Step2.pdb

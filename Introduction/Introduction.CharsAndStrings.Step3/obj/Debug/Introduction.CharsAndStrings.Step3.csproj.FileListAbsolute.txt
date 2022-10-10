@@ -1,0 +1,8 @@
+D:\KTU Objektinis Programavimas\Introduction\Introduction.CharsAndStrings.Step3\bin\Debug\Introduction.CharsAndStrings.Step3.exe.config
+D:\KTU Objektinis Programavimas\Introduction\Introduction.CharsAndStrings.Step3\bin\Debug\Introduction.CharsAndStrings.Step3.exe
+D:\KTU Objektinis Programavimas\Introduction\Introduction.CharsAndStrings.Step3\bin\Debug\Introduction.CharsAndStrings.Step3.pdb
+D:\KTU Objektinis Programavimas\Introduction\Introduction.CharsAndStrings.Step3\obj\Debug\Introduction.CharsAndStrings.Step3.csproj.AssemblyReference.cache
+D:\KTU Objektinis Programavimas\Introduction\Introduction.CharsAndStrings.Step3\obj\Debug\Introduction.CharsAndStrings.Step3.csproj.SuggestedBindingRedirects.cache
+D:\KTU Objektinis Programavimas\Introduction\Introduction.CharsAndStrings.Step3\obj\Debug\Introduction.CharsAndStrings.Step3.csproj.CoreCompileInputs.cache
+D:\KTU Objektinis Programavimas\Introduction\Introduction.CharsAndStrings.Step3\obj\Debug\Introduction.CharsAndStrings.Step3.exe
+D:\KTU Objektinis Programavimas\Introduction\Introduction.CharsAndStrings.Step3\obj\Debug\Introduction.CharsAndStrings.Step3.pdb

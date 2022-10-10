@@ -1,0 +1,9 @@
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Register.Step6\bin\Debug\Dogs.csv
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Register.Step6\bin\Debug\Lab1.Exercises.Register.Step6.exe.config
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Register.Step6\bin\Debug\Lab1.Exercises.Register.Step6.exe
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Register.Step6\bin\Debug\Lab1.Exercises.Register.Step6.pdb
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Register.Step6\obj\Debug\Lab1.Exercises.Register.Step6.csproj.AssemblyReference.cache
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Register.Step6\obj\Debug\Lab1.Exercises.Register.Step6.csproj.SuggestedBindingRedirects.cache
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Register.Step6\obj\Debug\Lab1.Exercises.Register.Step6.csproj.CoreCompileInputs.cache
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Register.Step6\obj\Debug\Lab1.Exercises.Register.Step6.exe
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.Register.Step6\obj\Debug\Lab1.Exercises.Register.Step6.pdb

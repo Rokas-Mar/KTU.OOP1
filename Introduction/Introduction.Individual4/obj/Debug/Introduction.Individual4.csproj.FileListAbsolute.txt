@@ -1,0 +1,8 @@
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Individual4\bin\Debug\Introduction.Individual4.exe.config
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Individual4\bin\Debug\Introduction.Individual4.exe
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Individual4\bin\Debug\Introduction.Individual4.pdb
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Individual4\obj\Debug\Introduction.Individual4.csproj.AssemblyReference.cache
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Individual4\obj\Debug\Introduction.Individual4.csproj.SuggestedBindingRedirects.cache
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Individual4\obj\Debug\Introduction.Individual4.csproj.CoreCompileInputs.cache
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Individual4\obj\Debug\Introduction.Individual4.exe
+D:\KTU Objektinis Programavimas\Introduction\Introduction.Individual4\obj\Debug\Introduction.Individual4.pdb

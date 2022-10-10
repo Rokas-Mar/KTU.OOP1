@@ -1,0 +1,9 @@
+D:\KTU Objektinis Programavimas\LD2\LD2.LAB\bin\Debug\Houses.csv
+D:\KTU Objektinis Programavimas\LD2\LD2.LAB\bin\Debug\LD2.LAB.exe.config
+D:\KTU Objektinis Programavimas\LD2\LD2.LAB\bin\Debug\LD2.LAB.exe
+D:\KTU Objektinis Programavimas\LD2\LD2.LAB\bin\Debug\LD2.LAB.pdb
+D:\KTU Objektinis Programavimas\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.AssemblyReference.cache
+D:\KTU Objektinis Programavimas\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.SuggestedBindingRedirects.cache
+D:\KTU Objektinis Programavimas\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.CoreCompileInputs.cache
+D:\KTU Objektinis Programavimas\LD2\LD2.LAB\obj\Debug\LD2.LAB.exe
+D:\KTU Objektinis Programavimas\LD2\LD2.LAB\obj\Debug\LD2.LAB.pdb

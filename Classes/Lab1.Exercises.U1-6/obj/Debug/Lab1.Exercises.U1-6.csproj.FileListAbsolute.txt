@@ -1,0 +1,18 @@
+D:\Rokas M\Classes\Lab1.Exercises.U1-6\bin\Debug\Lab1.Exercises.U1-6.exe.config
+D:\Rokas M\Classes\Lab1.Exercises.U1-6\bin\Debug\Lab1.Exercises.U1-6.exe
+D:\Rokas M\Classes\Lab1.Exercises.U1-6\bin\Debug\Lab1.Exercises.U1-6.pdb
+D:\Rokas M\Classes\Lab1.Exercises.U1-6\obj\Debug\Lab1.Exercises.U1-6.csproj.AssemblyReference.cache
+D:\Rokas M\Classes\Lab1.Exercises.U1-6\obj\Debug\Lab1.Exercises.U1-6.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\Classes\Lab1.Exercises.U1-6\obj\Debug\Lab1.Exercises.U1-6.csproj.CoreCompileInputs.cache
+D:\Rokas M\Classes\Lab1.Exercises.U1-6\obj\Debug\Lab1.Exercises.U1-6.exe
+D:\Rokas M\Classes\Lab1.Exercises.U1-6\obj\Debug\Lab1.Exercises.U1-6.pdb
+D:\Rokas M\Classes\Lab1.Exercises.U1-6\bin\Debug\Houses.csv
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.U1-6\bin\Debug\Houses.csv
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.U1-6\bin\Debug\Lab1.Exercises.U1-6.exe.config
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.U1-6\bin\Debug\Lab1.Exercises.U1-6.exe
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.U1-6\bin\Debug\Lab1.Exercises.U1-6.pdb
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.U1-6\obj\Debug\Lab1.Exercises.U1-6.csproj.AssemblyReference.cache
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.U1-6\obj\Debug\Lab1.Exercises.U1-6.csproj.SuggestedBindingRedirects.cache
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.U1-6\obj\Debug\Lab1.Exercises.U1-6.csproj.CoreCompileInputs.cache
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.U1-6\obj\Debug\Lab1.Exercises.U1-6.exe
+D:\KTU Objektinis Programavimas\Classes\Lab1.Exercises.U1-6\obj\Debug\Lab1.Exercises.U1-6.pdb

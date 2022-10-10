@@ -1,0 +1,8 @@
+D:\Rokas M\Introduction\Introduction.Loop.Step5\bin\Debug\Introduction.Loop.Step5.exe.config
+D:\Rokas M\Introduction\Introduction.Loop.Step5\bin\Debug\Introduction.Loop.Step5.exe
+D:\Rokas M\Introduction\Introduction.Loop.Step5\bin\Debug\Introduction.Loop.Step5.pdb
+D:\Rokas M\Introduction\Introduction.Loop.Step5\obj\Debug\Introduction.Loop.Step5.csproj.AssemblyReference.cache
+D:\Rokas M\Introduction\Introduction.Loop.Step5\obj\Debug\Introduction.Loop.Step5.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\Introduction\Introduction.Loop.Step5\obj\Debug\Introduction.Loop.Step5.csproj.CoreCompileInputs.cache
+D:\Rokas M\Introduction\Introduction.Loop.Step5\obj\Debug\Introduction.Loop.Step5.exe
+D:\Rokas M\Introduction\Introduction.Loop.Step5\obj\Debug\Introduction.Loop.Step5.pdb

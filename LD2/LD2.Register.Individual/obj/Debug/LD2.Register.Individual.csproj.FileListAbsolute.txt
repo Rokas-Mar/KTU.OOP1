@@ -1,0 +1,18 @@
+D:\Rokas M\LD2\LD2.Register.Individual\obj\Debug\LD2.Register.Individual.csproj.AssemblyReference.cache
+D:\Rokas M\LD2\LD2.Register.Individual\obj\Debug\LD2.Register.Individual.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\LD2\LD2.Register.Individual\obj\Debug\LD2.Register.Individual.csproj.CoreCompileInputs.cache
+D:\Rokas M\LD2\LD2.Register.Individual\bin\Debug\LD2.Register.Individual.exe.config
+D:\Rokas M\LD2\LD2.Register.Individual\bin\Debug\LD2.Register.Individual.exe
+D:\Rokas M\LD2\LD2.Register.Individual\bin\Debug\LD2.Register.Individual.pdb
+D:\Rokas M\LD2\LD2.Register.Individual\obj\Debug\LD2.Register.Individual.exe
+D:\Rokas M\LD2\LD2.Register.Individual\obj\Debug\LD2.Register.Individual.pdb
+D:\Rokas M\LD2\LD2.Register.Individual\bin\Debug\Flats.csv
+D:\KTU Objektinis Programavimas\LD2\LD2.Register.Individual\bin\Debug\Flats.csv
+D:\KTU Objektinis Programavimas\LD2\LD2.Register.Individual\bin\Debug\LD2.Register.Individual.exe.config
+D:\KTU Objektinis Programavimas\LD2\LD2.Register.Individual\bin\Debug\LD2.Register.Individual.exe
+D:\KTU Objektinis Programavimas\LD2\LD2.Register.Individual\bin\Debug\LD2.Register.Individual.pdb
+D:\KTU Objektinis Programavimas\LD2\LD2.Register.Individual\obj\Debug\LD2.Register.Individual.csproj.AssemblyReference.cache
+D:\KTU Objektinis Programavimas\LD2\LD2.Register.Individual\obj\Debug\LD2.Register.Individual.csproj.SuggestedBindingRedirects.cache
+D:\KTU Objektinis Programavimas\LD2\LD2.Register.Individual\obj\Debug\LD2.Register.Individual.csproj.CoreCompileInputs.cache
+D:\KTU Objektinis Programavimas\LD2\LD2.Register.Individual\obj\Debug\LD2.Register.Individual.exe
+D:\KTU Objektinis Programavimas\LD2\LD2.Register.Individual\obj\Debug\LD2.Register.Individual.pdb

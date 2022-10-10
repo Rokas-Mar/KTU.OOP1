@@ -1,0 +1,8 @@
+D:\Rokas M\Introduction\Introduction.SimpleMath\bin\Debug\Introduction.SimpleMath.exe.config
+D:\Rokas M\Introduction\Introduction.SimpleMath\bin\Debug\Introduction.SimpleMath.exe
+D:\Rokas M\Introduction\Introduction.SimpleMath\bin\Debug\Introduction.SimpleMath.pdb
+D:\Rokas M\Introduction\Introduction.SimpleMath\obj\Debug\Introduction.SimpleMath.csproj.AssemblyReference.cache
+D:\Rokas M\Introduction\Introduction.SimpleMath\obj\Debug\Introduction.SimpleMath.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\Introduction\Introduction.SimpleMath\obj\Debug\Introduction.SimpleMath.csproj.CoreCompileInputs.cache
+D:\Rokas M\Introduction\Introduction.SimpleMath\obj\Debug\Introduction.SimpleMath.exe
+D:\Rokas M\Introduction\Introduction.SimpleMath\obj\Debug\Introduction.SimpleMath.pdb
