@@ -7,3 +7,13 @@ D:\KTU Objektinis Programavimas\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.SuggestedBi
 D:\KTU Objektinis Programavimas\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.CoreCompileInputs.cache
 D:\KTU Objektinis Programavimas\LD2\LD2.LAB\obj\Debug\LD2.LAB.exe
 D:\KTU Objektinis Programavimas\LD2\LD2.LAB\obj\Debug\LD2.LAB.pdb
+C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\bin\Debug\Houses.csv
+C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\bin\Debug\LD2.LAB.exe.config
+C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\bin\Debug\LD2.LAB.exe
+C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\bin\Debug\LD2.LAB.pdb
+C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.AssemblyReference.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.exe
+C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.pdb
+C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\bin\Debug\Houses2.csv

@@ -51,5 +51,25 @@ namespace LD2.LAB
             }
             Console.WriteLine(new String('-', 117));
         }
+
+        public static void PrintHouse(House house, int age)
+        {
+            Console.WriteLine(new String('-', 65));
+            Console.WriteLine("| {0, -61} |", "Seniausias namas");
+            Console.WriteLine(new String('-', 65));
+            Console.WriteLine("| {0, 8} | {1, 24} | {2, 10} | {3, 10} |", "Amžius", "Adresas", "Tipas", "Plotas");
+            Console.WriteLine(new String('-', 65));
+            Console.WriteLine("| {0, 8} | {1, 24} | {2, 10} | {3, 10} |", age, house.Street + " " + house.Number, house.Type, house.Area);
+            Console.WriteLine(new String('-', 65));
+        }
+        
+        public static void PintStreet(List<House> Houses)
+        {
+            Console.WriteLine(new String('-', 50));
+            foreach(House house in Houses)
+            {
+                Console.WriteLine("| {0:20} | {1:5} |", house.Street, house.)
+            }
+        }
     }
 }
