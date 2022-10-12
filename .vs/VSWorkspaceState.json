@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Classes\\Lab1.Exercises.U1-6",
     "\\LD2",
-    "\\LD2\\LD2.LAB"
+    "\\LD2\\LD2.LAB",
+    "\\LD2\\LD2.LAB\\obj",
+    "\\LD2\\LD2.LAB\\obj\\Debug"
   ],
-  "SelectedNode": "\\LD2\\LD2.LAB\\Houses2.csv",
+  "SelectedNode": "\\LD2\\LD2.sln",
   "PreviewInSolutionExplorer": false
 }

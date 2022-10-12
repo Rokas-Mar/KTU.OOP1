@@ -3,41 +3,41 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace LD2.LAB
 {
+    /// <summary>
+    /// Main Class
+    /// </summary>
     internal class Program
     {
         static void Main(string[] args)
         {
-            HouseList Company1 = InOutUtils.ReadHouses(@"Houses.csv");
-            HouseList Company2 = InOutUtils.ReadHouses(@"Houses2.csv");
+            const double n = 100; // const of area
+
+            HouseList Company1 = InOutUtils.ReadHouses(@"Houses.csv"); // gets company 1 info
+            HouseList Company2 = InOutUtils.ReadHouses(@"Houses2.csv"); // gets company 2 info
+            // prints both companies and their sold houses
             InOutUtils.PrintHouses(Company1);
             InOutUtils.PrintHouses(Company2);
 
-            int maxVal = Company1.CountMostSoldSt().Max();
-            if(Company1.CountMostSoldSt().Max() > Company2.CountMostSoldSt().Max())
-            {
+            // combines company houses
+            HouseList CombinedHouses = new HouseList();
+            CombinedHouses = CombinedHouses.Combine(Company1, Company2);
 
-            }
+            // gets and prints most sold streets
+            List<SellingSt> SellingSts = CombinedHouses.GetMostSellingSt();
+            InOutUtils.PrintStreet(SellingSts);
 
-            House oldest1 = Company1.FindMinAge();
-            House oldest2 = Company2.FindMinAge();
+            // gets and prints oldest houses
+            List<House> MinAge = CombinedHouses.GetOldestHouses();
+            InOutUtils.PrintStreets(MinAge);
 
-            if(oldest1 < oldest2)
-            {
-                int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
-                int dob = int.Parse(oldest1.BuildDate.ToString("yyyyMMdd"));
-                int age = (now - dob) / 10000;
-                InOutUtils.PrintHouse(oldest1, age);
-            }
-            else
-            {
-                int now = int.Parse(DateTime.Now.ToString("yyyyMMdd"));
-                int dob = int.Parse(oldest2.BuildDate.ToString("yyyyMMdd"));
-                int age = (now - dob) / 10000;
-                InOutUtils.PrintHouse(oldest2, age);
-            }
+            // finds and prints to file brick houses that are over n area
+            File.WriteAllText(@"M100.csv", String.Empty);
+            List<House> BrickOverN = CombinedHouses.FindBrickHousesOverN(n);
+            InOutUtils.PrintHousesToCSV(BrickOverN, @"M100.csv");
 
             Console.ReadLine();
         }

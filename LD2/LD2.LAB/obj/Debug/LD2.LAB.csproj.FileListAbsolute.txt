@@ -17,3 +17,13 @@ C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.CoreCom
 C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.exe
 C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.pdb
 C:\Users\Bruger\Source\Repos\KTU.OP\LD2\LD2.LAB\bin\Debug\Houses2.csv
+D:\Rokas M\LD2\LD2.LAB\bin\Debug\Houses.csv
+D:\Rokas M\LD2\LD2.LAB\bin\Debug\Houses2.csv
+D:\Rokas M\LD2\LD2.LAB\bin\Debug\LD2.LAB.exe.config
+D:\Rokas M\LD2\LD2.LAB\bin\Debug\LD2.LAB.exe
+D:\Rokas M\LD2\LD2.LAB\bin\Debug\LD2.LAB.pdb
+D:\Rokas M\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.AssemblyReference.cache
+D:\Rokas M\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.CoreCompileInputs.cache
+D:\Rokas M\LD2\LD2.LAB\obj\Debug\LD2.LAB.exe
+D:\Rokas M\LD2\LD2.LAB\obj\Debug\LD2.LAB.pdb
