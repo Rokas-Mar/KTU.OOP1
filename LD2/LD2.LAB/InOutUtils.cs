@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Threading;
 
 namespace LD2.LAB
 {
@@ -42,6 +43,28 @@ namespace LD2.LAB
             }
             return Houses;
         }
+
+        /// <summary>
+        /// Prints all start info into txt file
+        /// </summary>
+        /// <param name="fileName">File name</param>
+        /// <param name="Houses">HouseList element</param>
+        public static void PrintHousesToTxt(string fileName, HouseList Houses)
+        {
+            string[] lines = new string[Houses.HouseCount() + 4];
+            lines[0] = String.Format(new String('-', 117));
+            lines[1] = String.Format("| {0, -15} | {1, -20} | {2, -8} | {3, -15} | {4, -10} | {5, -7} | {6, -20} | ",
+                "Mikrorajonas", "Gatvė", "Numeris", "Tipas", "Metai", "Plotas", "Kambariu skaicius");
+            lines[2] = String.Format(new String('-', 117));
+            for (int i = 0; i < Houses.HouseCount(); i++)
+            {
+                House house = Houses.GetIndexedElement(i);
+                lines[i + 3] = String.Format("| {0, -15} | {1, -20} | {2, 8} | {3, -15} | {4, 10:yyyy/MM/dd} | {5, 7} | {6, 20} | ",
+                    house.District, house.Street, house.Number, house.Type, house.BuildDate, house.Area, house.RoomCount);
+            }
+            lines[Houses.HouseCount() + 3] = String.Format(new String('-', 117));
+            File.AppendAllLines(fileName, lines, Encoding.UTF8);
+        }
         /// <summary>
         /// Prints all houses to console
         /// </summary>
@@ -49,16 +72,16 @@ namespace LD2.LAB
         public static void PrintHouses(HouseList houses)
         {
             Console.WriteLine(new String('-', 51));
-            Console.WriteLine("| {0, 15} | {1, 15} | {2, 11} |", "Kompanija", "Adresas", "Numeris");
+            Console.WriteLine("| {0, -15} | {1, -15} | {2, 11} |", "Kompanija", "Adresas", "Numeris");
             Console.WriteLine(new String('-', 51));
-            Console.WriteLine("| {0, 15} | {1, 15} | {2, 11} |", houses.CompanyName, houses.CompanyAdress, houses.CompanyCell);
+            Console.WriteLine("| {0, -15} | {1, -15} | {2, 11} |", houses.CompanyName, houses.CompanyAdress, houses.CompanyCell);
             Console.WriteLine(new String('-', 117));
-            Console.WriteLine("| {0, 15} | {1, 20} | {2, 8} | {3, 15} | {4, 10} | {5, 7} | {6, 20} |", "Mikrorajonas", "Gatvė", "Numeris", "Tipas", "Metai", "Plotas", "Kambariu skaičius");
+            Console.WriteLine("| {0, -15} | {1, -20} | {2, -8} | {3, -15} | {4, -10} | {5, -7} | {6, -20} |", "Mikrorajonas", "Gatvė", "Numeris", "Tipas", "Metai", "Plotas", "Kambariu skaičius");
             Console.WriteLine(new String('-', 117));
             for (int i = 0; i < houses.HouseCount(); i++)
             {
                 House house = houses.GetIndexedElement(i);
-                Console.WriteLine("| {0, 15} | {1, 20} | {2, 8} | {3, 15} | {4, 10:yyyy/MM/dd} | {5, 7} | {6, 20} |", house.District, house.Street, house.Number, house.Type, house.BuildDate, house.Area, house.RoomCount);
+                Console.WriteLine("| {0, -15} | {1, -20} | {2, 8} | {3, -15} | {4, 10:yyyy/MM/dd} | {5, 7} | {6, 20} |", house.District, house.Street, house.Number, house.Type, house.BuildDate, house.Area, house.RoomCount);
             }
             Console.WriteLine(new String('-', 117));
         }
@@ -66,47 +89,59 @@ namespace LD2.LAB
         /// Prints all oldest houses from a list
         /// </summary>
         /// <param name="Houses">House List element</param>
-        public static void PrintStreets(List<House> Houses)
+        public static void PrintStreets(HouseList Houses)
         {
             Console.WriteLine(new String('-', 65));
             Console.WriteLine("| {0, -61} |", "Seniausias namas");
             Console.WriteLine(new String('-', 65));
-            Console.WriteLine("| {0, 8} | {1, 24} | {2, 10} | {3, 10} |", "Amžius", "Adresas", "Tipas", "Plotas");
+            Console.WriteLine("| {0, -8} | {1, -24} | {2, -10} | {3, -10} |", "Amžius", "Adresas", "Tipas", "Plotas");
             Console.WriteLine(new String('-', 65));
-            foreach (House house in Houses)
+            for(int i = 0; i < Houses.HouseCount(); i++)
             {
-                Console.WriteLine("| {0, 8} | {1, 24} | {2, 10} | {3, 10} |", house.GetAge(), house.Street + " " + house.Number, house.Type, house.Area);
+                House house = Houses.GetIndexedElement(i);
+                Console.WriteLine("| {0, 8} | {1, -24} | {2, -10} | {3, 10} |", house.GetAge(), house.Street + " " + house.Number, house.Type, house.Area);
             }
             Console.WriteLine(new String('-', 65));
         }
         /// <summary>
         /// Prints all streets which have the most houses sold in them
         /// </summary>
-        /// <param name="SoldStreets">SellingSt List element</param>
-        public static void PrintStreet(List<SellingSt> SoldStreets)
+        /// <param name="Streets">SellingSt List element</param>
+        public static void PrintStreet(List<SellingSt> Streets)
         {
-            Console.WriteLine(new String('-', 48));
-            Console.WriteLine("| Daugiausiai parduodamų namų turinčios gatvės |");
-            Console.WriteLine(new String('-', 48));
-            foreach (SellingSt street in SoldStreets)
+            Console.WriteLine(new String('-', 53));
+            Console.WriteLine("| Gatvės, turinčios daugiausiai parduodamų namų ({0}) |", Streets[0].StCount);
+            Console.WriteLine(new String('-', 53));
+            for (int i = 0; i < Streets.Count(); i++)
             {
-                Console.WriteLine("| {0, -30} | {1, 11} |", street.Street, street.StCount);
+                Console.WriteLine("| {0, -49} |", Streets[i].Street);
             }
-            Console.WriteLine(new String('-', 48));
+            Console.WriteLine(new String('-', 53));
         }
         /// <summary>
         /// Prints all houses to a CSV file
         /// </summary>
-        /// <param name="Houses">House list element</param>
+        /// <param name="Company1">HouseList list element</param>
+        /// <param name="Company2">HouseList list element</param>
         /// <param name="fileName">File to which houses should be printed</param>
-        public static void PrintHousesToCSV(List<House> Houses, string fileName)
+        public static void PrintHousesToCSV(HouseList Company1, HouseList Company2, string fileName)
         {
-            string[] lines = new string[Houses.Count() + 1];
-            lines[0] = String.Format("{0};{1};{2};{3};{4};{5};{6}", "Mikrorajonas", "Gatvė", "Numeris", "Tipas", "Metai", "Plotas", "Kambariu skaičius");
-            for(int i = 0; i < Houses.Count(); i++)
+            string[] lines = new string[Company1.HouseCount() + Company2.HouseCount() + 1];
+            int count = 0;
+            HouseList Temp = Company1;
+            lines[0] = String.Format("{0};{1};{2};{3};{4};{5};{6}", "Mikrorajonas", "Gatvė", "Numeris", "Tipas", "Metai", "Plotas", "Kambarių skaičius");
+            for(int j = 0; j < 2; j++)
             {
-                lines[i + 1] = String.Format("{0};{1};{2};{3};{4};{5};{6}",
-                    Houses[i].District, Houses[i].Street, Houses[i].Number, Houses[i].Type, Houses[i].BuildDate, Houses[i].Area, Houses[i].RoomCount);
+                int m = 0;
+                for (int i = count; i < Temp.HouseCount() + count; i++)
+                {
+                    House Houses = Temp.GetIndexedElement(m);
+                    lines[i + 1] = String.Format("{0};{1};{2};{3};{4, 1:yyyy/MM/dd};{5};{6}",
+                        Houses.District, Houses.Street, Houses.Number, Houses.Type, Houses.BuildDate, Houses.Area, Houses.RoomCount);
+                    m++;
+                }
+                count = Company1.HouseCount();
+                Temp = Company2;
             }
             File.AppendAllLines(fileName, lines, Encoding.UTF8);
         }

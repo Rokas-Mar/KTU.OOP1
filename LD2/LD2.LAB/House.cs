@@ -48,45 +48,67 @@ namespace LD2.LAB
             }
             return age;
         }
+
         /// <summary>
-        /// Compares build dates of two house objects
+        /// Compares dates between House element and date
         /// </summary>
-        /// <param name="first">House class element</param>
-        /// <param name="second">House class element</param>
-        /// <returns>true if first building is older</returns>
-        public static bool operator <(House first, House second)
+        /// <param name="house">House element</param>
+        /// <param name="date">DateTime element</param>
+        /// <returns>true if house build date is less than the date it is compared to</returns>
+        public static bool operator <(House house, DateTime date)
         {
-            return first.BuildDate < second.BuildDate;
+            return house.BuildDate < date;
         }
         /// <summary>
-        /// Compares build dates of two house objects
+        /// Compares dates between House element and date
         /// </summary>
-        /// <param name="first">House class element</param>
-        /// <param name="second">House class element</param>
-        /// <returns>true if second building is older</returns>
-        public static bool operator >(House first, House second)
+        /// <param name="house">House element</param>
+        /// <param name="date">DateTime element</param>
+        /// <returns>true if house build date is greater than the date it is compared to</returns>
+        public static bool operator >(House house, DateTime date)
         {
-            return first.BuildDate > second.BuildDate;
+            return house.BuildDate > date;
         }
+
         /// <summary>
-        /// Compares build dates of two house objects
+        /// Checks if build date is equal to date
         /// </summary>
-        /// <param name="first">House class element</param>
-        /// <param name="second">House class element</param>
-        /// <returns>true if first building is older or same age</returns>
-        public static bool operator <=(House first, House second)
+        /// <param name="house">House element</param>
+        /// <param name="date">DateTime element</param>
+        /// <returns>true if build date is equal to date</returns>
+        public static bool operator ==(House house, DateTime date)
         {
-            return first.BuildDate <= second.BuildDate;
+            return house.BuildDate == date;
         }
+
         /// <summary>
-        /// Compares build dates of two house objects
+        /// Checks if build date is not equal to date
         /// </summary>
-        /// <param name="first">House class element</param>
-        /// <param name="second">House class element</param>
-        /// <returns>true if second building is older or same age</returns>
-        public static bool operator >=(House first, House second)
+        /// <param name="house">House element</param>
+        /// <param name="date">DateTime element</param>
+        /// <returns>true if build date is not equal to date</returns>
+        public static bool operator !=(House house, DateTime date)
         {
-            return first.BuildDate >= second.BuildDate;
+            return house.BuildDate != date;
+        }
+
+        /// <summary>
+        /// GetHashCode override
+        /// </summary>
+        /// <returns>HashCode</returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        /// <summary>
+        /// Equals override
+        /// </summary>
+        /// <param name="obj">Class object</param>
+        /// <returns>true if obj equals to object</returns>
+        public override bool Equals(object obj)
+        {
+            return base.Equals(obj);
         }
     }
 }

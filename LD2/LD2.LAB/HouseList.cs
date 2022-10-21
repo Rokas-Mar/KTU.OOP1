@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -17,13 +18,15 @@ namespace LD2.LAB
         public string CompanyCell { get; set; } // Company cellphone
 
         private List<House> AllHouses; // List of house class elements
+        private List<SellingSt> AllStreets;
 
-        public HouseList(string companyName, string companyAdress, string companyCell, List<House> allHouses)
+        public HouseList(string companyName, string companyAdress, string companyCell, List<House> allHouses, List<SellingSt> allStreets)
         {
             CompanyName = companyName;
             CompanyAdress = companyAdress;
             CompanyCell = companyCell;
             AllHouses = allHouses;
+            AllStreets = allStreets;
         }
 
         public HouseList()
@@ -41,12 +44,30 @@ namespace LD2.LAB
         }
 
         /// <summary>
+        /// Add overload to append AllStreets List
+        /// </summary>
+        /// <param name="house"></param>
+        public void Add(SellingSt house)
+        {
+            AllStreets.Add(house);
+        }
+
+        /// <summary>
         /// Calculates the count of houses in AllHouses List
         /// </summary>
         /// <returns>int count of houses in the list</returns>
         public int HouseCount()
         {
             return AllHouses.Count();
+        }
+
+        /// <summary>
+        /// Gets AllStreets count
+        /// </summary>
+        /// <returns>AllStreets count</returns>
+        public int StreetCount()
+        {
+            return AllStreets.Count();
         }
 
         /// <summary>
@@ -59,6 +80,16 @@ namespace LD2.LAB
             return AllHouses[index];
         }
         
+        /// <summary>
+        /// Gets a street from List with the same index
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        public SellingSt GetIndexedStreet(int index)
+        {
+            return AllStreets[index];
+        }
+
         /// <summary>
         /// Gets indexed element date
         /// </summary>
@@ -73,16 +104,22 @@ namespace LD2.LAB
         /// Finds the minimum age of AllHouses List
         /// </summary>
         /// <returns>min age of AllAHouses</returns>
-        public DateTime FindMinAge()
+        public DateTime FindMinAge(HouseList Company1, HouseList Company2)
         {
             DateTime date = DateTime.MaxValue;
-
-            foreach (House house in AllHouses)
+            HouseList Check = Company1;
+            int n = Company1.HouseCount();
+            for (int i = 0; i < 2; i++)
             {
-                if (house.BuildDate < date)
+                for (int j = 0; j < n; j++)
                 {
-                    date = house.BuildDate;
+                    if (Check.GetIndexedDate(j) < date)
+                    {
+                        date = Check.GetIndexedDate(j);
+                    }
                 }
+                n = Company2.HouseCount();
+                Check = Company2;
             }
 
             return date;
@@ -92,33 +129,24 @@ namespace LD2.LAB
         /// Gets the oldest houses by index
         /// </summary>
         /// <returns>List of oldest houses</returns>
-        public List<House> GetOldestHouses()
+        public HouseList GetOldestHouses(HouseList Company1, HouseList Company2)
         {
-            DateTime date = this.FindMinAge();
-            List<House> Houses = new List<House>();
-            foreach (House house in AllHouses)
+            DateTime date = this.FindMinAge(Company1, Company2);
+            HouseList Houses = new HouseList();
+            int n = Company1.HouseCount();
+            HouseList Check = Company1;
+            for(int i = 0; i < 2; i++)
             {
-                if (house.BuildDate == date)
+                for(int j = 0; j < n; j++)
                 {
-                    Houses.Add(house);
+                    if (Check.GetIndexedDate(j) == date)
+                    {
+
+                        Houses.Add((House)Check.GetIndexedElement(j));
+                    }
                 }
-            }
-            return Houses;
-        }
-
-        /// <summary>
-        /// Combunes two company houses into one list
-        /// </summary>
-        /// <param name="Company1">Company 1</param>
-        /// <param name="Company2">Company 2</param>
-        /// <returns>List of combined houses in both companies</returns>
-        public HouseList Combine(HouseList Company1, HouseList Company2)
-        {
-            HouseList Houses = Company1;
-
-            for(int i = 0; i < Company2.HouseCount(); i++)
-            {
-                Houses.Add(Company2.GetIndexedElement(i));
+                n = Company2.HouseCount();
+                Check = Company2;
             }
             return Houses;
         }
@@ -127,17 +155,21 @@ namespace LD2.LAB
         /// Gets streets with no repetitions of AllHouses
         /// </summary>
         /// <returns>List of houses</returns>
-        public List<string> GetSteets()
+        public List<string> GetStreets(HouseList Company1, HouseList Company2)
         {
             List<string> Streets = new List<string>();
-            foreach (House house in AllHouses)
+            HouseList Temp = Company1;
+            for(int i = 0; i < 2; i++)
             {
-                if (!Streets.Contains(house.Street))
+                for(int j = 0; j < Temp.HouseCount(); j++)
                 {
-                    Streets.Add(house.Street);
+                    if (!Streets.Contains(Temp.GetIndexedElement(j).Street))
+                    {
+                        Streets.Add(Temp.GetIndexedElement(j).Street);
+                    }
                 }
+                Temp = Company2;
             }
-
             return Streets;
         }
 
@@ -145,44 +177,50 @@ namespace LD2.LAB
         /// Counts houses in streets
         /// </summary>
         /// <returns>list of intigers of how much houses are in each street</returns>
-        public int[] CountMostSoldSt()
+        public int[] CountMostSoldSt(HouseList Company1, HouseList Company2)
         {
-            List<string> Streets = this.GetSteets();
-
+            List<string> Streets = this.GetStreets(Company1, Company2);
+            HouseList Temp = Company1;
             int[] StreetCount = new int[Streets.Count()];
-            for (int i = 0; i < Streets.Count(); i++)
+            for (int k = 0; k < 2; k++)
             {
-                for (int j = 0; j < AllHouses.Count(); j++)
+                for (int i = 0; i < Streets.Count(); i++)
                 {
-                    if (Streets[i] == AllHouses[j].Street)
+                    for (int j = 0; j < Temp.HouseCount(); j++)
                     {
-                        StreetCount[i]++;
+                        if (Streets[i] == Temp.GetIndexedElement(j).Street)
+                        {
+                            StreetCount[i]++;
+                        }
                     }
                 }
+                Temp = Company2;
             }
             return StreetCount;
         }
-
+        
         /// <summary>
-        /// gets most selling street list
+        /// Gets all most sold streets and puts them in a list
         /// </summary>
-        /// <returns>list of selling streets</returns>
-        public List<SellingSt> GetMostSellingSt()
+        /// <param name="Company1">HouseList element</param>
+        /// <param name="Company2">HouseList element</param>
+        /// <returns>SellingSt List of streets and their count</returns>
+        public List<SellingSt> GetMostSoldStreets(HouseList Company1, HouseList Company2)
         {
-            int[] StreetCount = this.CountMostSoldSt();
-            List<string> Streets = this.GetSteets();
-            List<SellingSt> MostSoldStreets = new List<SellingSt>();
-            int maxVal = StreetCount.Max();
-
-            for (int i = 0; i < Streets.Count(); i++)
+            HouseList Temp = new HouseList();
+            List<SellingSt> SoldStreets = new List<SellingSt>();
+            int[] StreetCount = Temp.CountMostSoldSt(Company1, Company2);
+            List<string> Streets = Temp.GetStreets(Company1, Company2);
+            int maxCount = StreetCount.Max();
+            for (int i = 0; i < Streets.Count; i++)
             {
-                if (StreetCount[i] == maxVal)
+                if(StreetCount[i] == maxCount)
                 {
                     SellingSt street = new SellingSt(Streets[i], StreetCount[i]);
-                    MostSoldStreets.Add(street);
+                    SoldStreets.Add(street);
                 }
             }
-            return MostSoldStreets;
+            return SoldStreets;
         }
 
         /// <summary>
@@ -190,9 +228,9 @@ namespace LD2.LAB
         /// </summary>
         /// <param name="n">area</param>
         /// <returns>List of houses</returns>
-        public List<House> FindBrickHousesOverN(double n)
+        public HouseList FindBrickHousesOverN(double n)
         {
-            List<House> houses = new List<House>();
+            HouseList houses = new HouseList();
 
             for(int i = 0; i < AllHouses.Count; i++)
             {

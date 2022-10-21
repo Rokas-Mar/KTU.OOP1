@@ -27,3 +27,13 @@ D:\Rokas M\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.SuggestedBindingRedirects.cache
 D:\Rokas M\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.CoreCompileInputs.cache
 D:\Rokas M\LD2\LD2.LAB\obj\Debug\LD2.LAB.exe
 D:\Rokas M\LD2\LD2.LAB\obj\Debug\LD2.LAB.pdb
+D:\KTU OP\LD2\LD2.LAB\bin\Debug\Houses.csv
+D:\KTU OP\LD2\LD2.LAB\bin\Debug\Houses2.csv
+D:\KTU OP\LD2\LD2.LAB\bin\Debug\LD2.LAB.exe.config
+D:\KTU OP\LD2\LD2.LAB\bin\Debug\LD2.LAB.exe
+D:\KTU OP\LD2\LD2.LAB\bin\Debug\LD2.LAB.pdb
+D:\KTU OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.AssemblyReference.cache
+D:\KTU OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.SuggestedBindingRedirects.cache
+D:\KTU OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.csproj.CoreCompileInputs.cache
+D:\KTU OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.exe
+D:\KTU OP\LD2\LD2.LAB\obj\Debug\LD2.LAB.pdb

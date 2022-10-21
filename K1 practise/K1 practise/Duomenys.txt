@@ -1,0 +1,4 @@
+﻿Vardas;10
+abc;2
+terasd;1
+asdsad;3

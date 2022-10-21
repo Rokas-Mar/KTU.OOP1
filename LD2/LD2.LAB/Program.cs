@@ -14,31 +14,47 @@ namespace LD2.LAB
     {
         static void Main(string[] args)
         {
-            const double n = 100; // const of area
+            const double n = 100; // constans of area
 
             HouseList Company1 = InOutUtils.ReadHouses(@"Houses.csv"); // gets company 1 info
             HouseList Company2 = InOutUtils.ReadHouses(@"Houses2.csv"); // gets company 2 info
-            // prints both companies and their sold houses
-            InOutUtils.PrintHouses(Company1);
-            InOutUtils.PrintHouses(Company2);
 
-            // combines company houses
-            HouseList CombinedHouses = new HouseList();
-            CombinedHouses = CombinedHouses.Combine(Company1, Company2);
+            if (Company1 != null && Company2 != null)
+            {
+                // prints both companies and their sold houses
+                InOutUtils.PrintHouses(Company1);
+                InOutUtils.PrintHouses(Company2);
 
-            // gets and prints most sold streets
-            List<SellingSt> SellingSts = CombinedHouses.GetMostSellingSt();
-            InOutUtils.PrintStreet(SellingSts);
+                // prints all start info into txt file
+                File.WriteAllText(@"startInfo.txt", String.Empty);
+                InOutUtils.PrintHousesToTxt(@"startInfo.txt", Company1);
+                InOutUtils.PrintHousesToTxt(@"startInfo.txt", Company2);
 
-            // gets and prints oldest houses
-            List<House> MinAge = CombinedHouses.GetOldestHouses();
-            InOutUtils.PrintStreets(MinAge);
+                // gets and prints most sold streets
+                List<SellingSt> houseList = Company1.GetMostSoldStreets(Company1, Company2);
+                InOutUtils.PrintStreet(houseList);
 
-            // finds and prints to file brick houses that are over n area
-            File.WriteAllText(@"M100.csv", String.Empty);
-            List<House> BrickOverN = CombinedHouses.FindBrickHousesOverN(n);
-            InOutUtils.PrintHousesToCSV(BrickOverN, @"M100.csv");
+                // gets and prints oldest houses
+                HouseList MinAge = new HouseList();
+                InOutUtils.PrintStreets(MinAge.GetOldestHouses(Company1, Company2));
 
+                File.WriteAllText(@"M100.csv", string.Empty);
+                HouseList BrickOverN1 = Company1.FindBrickHousesOverN(n);
+                HouseList BrickOverN2 = Company2.FindBrickHousesOverN(n);
+                // prints houses if any one of them has elements
+                if (BrickOverN1 != null && BrickOverN2 != null)
+                {
+                    InOutUtils.PrintHousesToCSV(BrickOverN1, BrickOverN2, @"M100.csv");
+                }
+                else
+                {
+                    Console.WriteLine("Mūrinių namų, didesnio ploto už n nerasta");
+                }
+            }
+            else 
+            {
+                Console.WriteLine("Nepakanka duomenų");
+            }
             Console.ReadLine();
         }
     }

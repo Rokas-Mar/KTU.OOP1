@@ -1,0 +1,3 @@
+D:\KTU OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.AssemblyReference.cache
+D:\KTU OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.SuggestedBindingRedirects.cache
+D:\KTU OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.CoreCompileInputs.cache
