@@ -21,7 +21,7 @@ namespace LD3.Exercises
             InOutUtils.PrintDogs(register);
 
             Console.WriteLine("Reikia paskiepyti: ");
-            DogsRegister FilteredByVaccinationExpired = register.FilterByVaccinationExpired();
+            DogsContainer FilteredByVaccinationExpired = register.FilterByVaccinationExpired();
             InOutUtils.PrintDogs(FilteredByVaccinationExpired);
 
             Console.WriteLine("Patinų: {0}", register.CountByGender(Gender.Male));
@@ -38,11 +38,11 @@ namespace LD3.Exercises
             InOutUtils.PrintBreeds(Breeds);
             Console.WriteLine();
 
-            Console.WriteLine("Iš viso šunų: {0}", register.DogsCount());
+            Console.WriteLine("Iš viso šunų: {0}", register.Count);
 
             Console.WriteLine("Kokios veislės šunis atrinkti?");
             string selectedBreed = Console.ReadLine();
-            List<Dogs> FilteredByBreed = register.FilterByBreed(selectedBreed);
+            DogsContainer FilteredByBreed = register.FilterByBreed(selectedBreed);
             InOutUtils.PrintDogs(FilteredByBreed);
 
             string fileName = selectedBreed + ".csv";

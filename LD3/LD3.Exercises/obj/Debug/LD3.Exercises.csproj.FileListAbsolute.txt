@@ -1,3 +1,13 @@
 D:\KTU OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.AssemblyReference.cache
 D:\KTU OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.SuggestedBindingRedirects.cache
 D:\KTU OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.AssemblyReference.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\bin\Debug\LD3.Exercises.exe.config
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\bin\Debug\LD3.Exercises.exe
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\bin\Debug\LD3.Exercises.pdb
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.exe
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.pdb
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\bin\Debug\Dogs.csv
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\bin\Debug\Vaccinations.csv

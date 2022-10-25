@@ -35,7 +35,7 @@ namespace LD3.Exercises
             return Dogs;
         }
 
-        public static void PrintDogs(string label, DogsContainer Dogs)
+        public static void PrintDogs(DogsContainer Dogs)
         {
             Console.WriteLine(new String('-', 74));
             Console.WriteLine("| {0, 8} | {1, -15} | {2, -15} | {3, -12} | {4, -8} |",
@@ -58,15 +58,16 @@ namespace LD3.Exercises
             }
         }
 
-        public static void PrintDogsToCSVFile(string fileName, List<Dogs> Dogs)
+        public static void PrintDogsToCSVFile(string fileName, DogsContainer Dogs)
         {
             string[] lines = new string[Dogs.Count + 1];
             lines[0] = String.Format("{0};{1};{2};{3};{4}",
             "Reg.Nr.", "Vardas", "Veislė", "Gimimo data", "Lytis");
             for (int i = 0; i < Dogs.Count; i++)
             {
+                Dogs Dog = Dogs.Get(i);
                 lines[i + 1] = String.Format("{0};{1};{2};{3};{4}",
-                Dogs[i].ID, Dogs[i].Name, Dogs[i].Breed, Dogs[i].BirthDate, Dogs[i].Gender);
+                Dog.ID, Dog.Name, Dog.Breed, Dog.BirthDate, Dog.Gender);
             }
             File.WriteAllLines(fileName, lines, Encoding.UTF8);
         }
