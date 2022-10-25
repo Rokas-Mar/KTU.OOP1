@@ -65,5 +65,10 @@ namespace LD3.Exercises
         {
             return this.ID.GetHashCode();
         }
+
+        public int CompareTo(Dogs other)
+        {
+            return this.Breed.CompareTo(other.Breed);
+        }
     }
 }

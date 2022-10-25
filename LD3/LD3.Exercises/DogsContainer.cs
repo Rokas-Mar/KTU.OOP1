@@ -9,15 +9,60 @@ namespace LD3.Exercises
     internal class DogsContainer
     {
         private Dogs[] dogs;
+        int Capacity;
         public int Count { get; private set; }
 
-        public DogsContainer()
+        public DogsContainer(int capacity = 16)
         {
-            this.dogs = new Dogs[16];
+            this.Capacity = capacity;
+            this.dogs = new Dogs[capacity];
+        }
+
+        public void Put(Dogs dog, int index)
+        {
+            dogs[index] = dog;
+        }
+
+        public void Insert(Dogs dog, int index)
+        {
+            if (this.Count == this.Capacity)
+            {
+                EnsureCapacity(this.Capacity * 2);
+            }
+            for (int i = this.Count; i > index; i--)
+            {
+                this.dogs[i] = this.dogs[i - 1];
+            }
+            this.dogs[index] = dog;
+            this.Count++;
+        }
+
+        public void Remove(Dogs dog)
+        {
+            for(int i = 0; i < this.Count; i++)
+            {
+                if (this.Get(i) == dog)
+                {
+                    RemoveAt(i);
+                }
+            }
+        }
+
+        public void RemoveAt(int index)
+        {
+            for (int i = index; i < this.Count; i++)
+            {
+                this.dogs[index] = this.dogs[index + 1];
+            }
+            this.Count--;
         }
 
         public void Add(Dogs dog)
         {
+            if(this.Count == this.Capacity)
+            {
+                EnsureCapacity(this.Capacity * 2);
+            }
             this.dogs[this.Count++] = dog;
         }
 
@@ -28,7 +73,7 @@ namespace LD3.Exercises
 
         public bool Contains(Dogs dog)
         {
-            for(int i = 0; i < this.Count; i++)
+            for (int i = 0; i < this.Count; i++)
             {
                 if (this.dogs[i].Equals(dog))
                 {
@@ -142,6 +187,20 @@ namespace LD3.Exercises
                 }
             }
             return Filtered;
+        }
+
+        private void EnsureCapacity(int minimumCapacity)
+        {
+            if(minimumCapacity > this.Capacity)
+            {
+                Dogs[] temp = new Dogs[minimumCapacity];
+                for(int i = 0; i < this.Count; i++)
+                {
+                    temp[i] = this.dogs[i];
+                }
+                this.Capacity = minimumCapacity;
+                this.dogs = temp;
+            }
         }
     }
 }

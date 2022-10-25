@@ -40,13 +40,13 @@ namespace LD3.Exercises
 
             Console.WriteLine("Iš viso šunų: {0}", register.Count);
 
-            Console.WriteLine("Kokios veislės šunis atrinkti?");
-            string selectedBreed = Console.ReadLine();
-            DogsContainer FilteredByBreed = register.FilterByBreed(selectedBreed);
-            InOutUtils.PrintDogs(FilteredByBreed);
+            //Console.WriteLine("Kokios veislės šunis atrinkti?");
+            //string selectedBreed = Console.ReadLine();
+            //DogsContainer FilteredByBreed = register.FilterByBreed(selectedBreed);
+            //InOutUtils.PrintDogs(FilteredByBreed);
 
-            string fileName = selectedBreed + ".csv";
-            InOutUtils.PrintDogsToCSVFile(fileName, FilteredByBreed);
+            //string fileName = selectedBreed + ".csv";
+            //InOutUtils.PrintDogsToCSVFile(fileName, FilteredByBreed);
         }
     }
 }
