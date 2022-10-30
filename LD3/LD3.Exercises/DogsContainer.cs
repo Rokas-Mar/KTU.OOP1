@@ -9,7 +9,7 @@ namespace LD3.Exercises
     internal class DogsContainer
     {
         private Dogs[] dogs;
-        int Capacity;
+        private int Capacity;
         public int Count { get; private set; }
 
         public DogsContainer(int capacity = 16)
@@ -18,9 +18,17 @@ namespace LD3.Exercises
             this.dogs = new Dogs[capacity];
         }
 
+        public DogsContainer(DogsContainer container): this(container.Count + 1)
+        {
+            for(int i = 0; i < container.Count; i++)
+            {
+                this.Add(container.Get(i));
+            }
+        }
+
         public void Put(Dogs dog, int index)
         {
-            dogs[index] = dog;
+            this.dogs[index] = dog;
         }
 
         public void Insert(Dogs dog, int index)
@@ -201,6 +209,40 @@ namespace LD3.Exercises
                 this.Capacity = minimumCapacity;
                 this.dogs = temp;
             }
+        }
+
+        public void Sort()
+        {
+            bool flag = true;
+            while (flag)
+            {
+                flag = false;
+                for (int i = 0; i < this.Count - 1; i++)
+                {
+                    Dogs a = this.dogs[i];
+                    Dogs b = this.dogs[i + 1];
+                    if(a.CompareTo(b) < 0)
+                    {
+                        this.dogs[i] = b;
+                        this.dogs[i + 1] = a;
+                        flag = true;
+                    }
+                }
+            }
+        }
+
+        public DogsContainer Intersect(DogsContainer other)
+        {
+            DogsContainer result = new DogsContainer();
+            for(int i = 0; i < this.Count; i++)
+            {
+                Dogs current = this.dogs[i];
+                if(other.Contains(current))
+                {
+                    result.Add(current);
+                }
+            }
+            return result;
         }
     }
 }

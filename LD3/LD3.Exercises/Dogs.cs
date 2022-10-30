@@ -68,7 +68,14 @@ namespace LD3.Exercises
 
         public int CompareTo(Dogs other)
         {
-            return this.Breed.CompareTo(other.Breed);
+            if (this.Gender == other.Gender)
+            {
+                return this.Breed.CompareTo(other.Breed);
+            }
+            else
+            {
+                return other.Gender.CompareTo(this.Gender);
+            }
         }
     }
 }

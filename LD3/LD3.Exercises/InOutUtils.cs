@@ -35,8 +35,10 @@ namespace LD3.Exercises
             return Dogs;
         }
 
-        public static void PrintDogs(DogsContainer Dogs)
+        public static void PrintDogs(string label, DogsContainer Dogs)
         {
+            Console.WriteLine(new String('-', 74));
+            Console.WriteLine("| {0, -70} |", label);
             Console.WriteLine(new String('-', 74));
             Console.WriteLine("| {0, 8} | {1, -15} | {2, -15} | {3, -12} | {4, -8} |",
                 "Reg.Nr.", "Vardas", "Veisle", "Gimimo data", "Lytis");

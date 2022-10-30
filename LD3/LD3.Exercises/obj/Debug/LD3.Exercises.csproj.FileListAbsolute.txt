@@ -11,3 +11,13 @@ C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.ex
 C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.pdb
 C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\bin\Debug\Dogs.csv
 C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.Exercises\bin\Debug\Vaccinations.csv
+D:\Rokas M\LD3\LD3.Exercises\bin\Debug\Dogs.csv
+D:\Rokas M\LD3\LD3.Exercises\bin\Debug\Vaccinations.csv
+D:\Rokas M\LD3\LD3.Exercises\bin\Debug\LD3.Exercises.exe.config
+D:\Rokas M\LD3\LD3.Exercises\bin\Debug\LD3.Exercises.exe
+D:\Rokas M\LD3\LD3.Exercises\bin\Debug\LD3.Exercises.pdb
+D:\Rokas M\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.AssemblyReference.cache
+D:\Rokas M\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.csproj.CoreCompileInputs.cache
+D:\Rokas M\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.exe
+D:\Rokas M\LD3\LD3.Exercises\obj\Debug\LD3.Exercises.pdb

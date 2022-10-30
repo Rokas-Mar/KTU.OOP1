@@ -1,0 +1,18 @@
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\Individual ė\bin\Debug\Individual ė.exe.config
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\Individual ė\bin\Debug\Individual ė.exe
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\Individual ė\bin\Debug\Individual ė.pdb
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\Individual ė\obj\Debug\Individual 4.csproj.AssemblyReference.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\Individual ė\obj\Debug\Individual 4.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\Individual ė\obj\Debug\Individual 4.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\Individual ė\obj\Debug\Individual ė.exe
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\Individual ė\obj\Debug\Individual ė.pdb
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\Individual ė\bin\Debug\Students.csv
+D:\Rokas M\LD3\Individual ė\bin\Debug\Students.csv
+D:\Rokas M\LD3\Individual ė\bin\Debug\Individual ė.exe.config
+D:\Rokas M\LD3\Individual ė\bin\Debug\Individual ė.exe
+D:\Rokas M\LD3\Individual ė\bin\Debug\Individual ė.pdb
+D:\Rokas M\LD3\Individual ė\obj\Debug\Individual 4.csproj.AssemblyReference.cache
+D:\Rokas M\LD3\Individual ė\obj\Debug\Individual 4.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\LD3\Individual ė\obj\Debug\Individual 4.csproj.CoreCompileInputs.cache
+D:\Rokas M\LD3\Individual ė\obj\Debug\Individual ė.exe
+D:\Rokas M\LD3\Individual ė\obj\Debug\Individual ė.pdb
