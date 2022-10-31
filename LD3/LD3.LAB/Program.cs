@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.CodeDom;
 
 namespace LD3.LAB
 {
@@ -12,6 +13,9 @@ namespace LD3.LAB
     {
         static void Main(string[] args)
         {
+            const string type = "mūrinis";
+            const double area = 100;
+
             HouseRegister Company1 = InOutUtils.ReadHouses(@"Houses.csv");
             HouseRegister Company2 = InOutUtils.ReadHouses(@"Houses2.csv");
 
@@ -20,8 +24,10 @@ namespace LD3.LAB
                 File.WriteAllText(@"Initial.txt", String.Empty);
                 InOutUtils.PrintHousesToTxt(@"Initial.txt", Company1);
                 InOutUtils.PrintHousesToTxt(@"Initial.txt", Company2);
+
                 InOutUtils.PrintHouses("Pirmoji agentūra", Company1);
                 InOutUtils.PrintHouses("Antroji agentūra", Company2);
+
                 HouseRegister OldestHouses = Company1.GetOldestHouses(Company2);
                 InOutUtils.PrintOldestHouses("Seniausi namai", OldestHouses);
 
@@ -38,6 +44,16 @@ namespace LD3.LAB
                 else
                 {
                     Console.WriteLine("Namų, parduodamų abejose agentūrose, nėra");
+                }
+
+                HouseRegister HousesTypeOverArea = Company1.GetMHousesOverN(type, area, Company2);
+                if(HousesTypeOverArea != null)
+                {
+                    InOutUtils.PrintToCSVFile("Namai, " + type + " tipo ir didesni už " + area, @"M100.csv", HousesTypeOverArea);
+                }
+                else
+                {
+                    Console.WriteLine("Namų, " + type + " tipo ir didesnų už " + area + "nėra");
                 }
             }
             else

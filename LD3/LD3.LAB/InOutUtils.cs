@@ -114,7 +114,7 @@ namespace LD3.LAB
                 lines[i + 2] = String.Format("{0};{1};{2};{3};{4, 1:yyyy/MM/dd};{5};{6}",
                     House.District, House.Street, House.Number, House.Type, House.BuildDate, House.Area, House.RoomCount);
             }
-            File.AppendAllLines(fileName, lines, Encoding.UTF8);
+            File.WriteAllLines(fileName, lines, Encoding.UTF8);
         }
     }
 }

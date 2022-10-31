@@ -160,5 +160,27 @@ namespace LD3.LAB
             }
             return houseRegister;
         }
+
+        public HouseRegister GetMHousesOverN(string type, double area, HouseRegister Company)
+        {
+            HouseRegister Filtered = new HouseRegister();
+            HouseRegister Temp = this;
+            for(int i = 0; i < 2; i++)
+            {
+                for(int j = 0; j < Temp.Count(); j++)
+                {
+                    House house = Temp.Get(j);
+                    if(house.Type.ToLower().Trim() == type.ToLower().Trim() && house.Area > area)
+                    {
+                        if (!Filtered.Contains(house))
+                        {
+                            Filtered.Add(house);
+                        }
+                    }
+                }
+                Temp = Company;
+            }
+            return Filtered;
+        }
     }
 }

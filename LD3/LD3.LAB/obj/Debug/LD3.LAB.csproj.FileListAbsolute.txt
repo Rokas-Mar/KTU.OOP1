@@ -17,3 +17,13 @@ D:\KTU OP\LD3\LD3.LAB\obj\Debug\LD3.LAB.csproj.CoreCompileInputs.cache
 D:\KTU OP\LD3\LD3.LAB\obj\Debug\LD3.LAB.exe
 D:\KTU OP\LD3\LD3.LAB\obj\Debug\LD3.LAB.pdb
 D:\KTU OP\LD3\LD3.LAB\bin\Debug\Houses2.csv
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.LAB\bin\Debug\Houses.csv
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.LAB\bin\Debug\Houses2.csv
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.LAB\bin\Debug\LD3.LAB.exe.config
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.LAB\bin\Debug\LD3.LAB.exe
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.LAB\bin\Debug\LD3.LAB.pdb
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.LAB\obj\Debug\LD3.LAB.csproj.AssemblyReference.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.LAB\obj\Debug\LD3.LAB.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.LAB\obj\Debug\LD3.LAB.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.LAB\obj\Debug\LD3.LAB.exe
+C:\Users\Bruger\Source\Repos\KTU.OP\LD3\LD3.LAB\obj\Debug\LD3.LAB.pdb
