@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace LD3.LAB
 {
+    /// <summary>
+    /// House register class
+    /// </summary>
     internal class HouseRegister
     {
         public string Company { get; set; }
@@ -30,26 +33,49 @@ namespace LD3.LAB
             this.Houses = new HouseContainer();
         }
 
+        /// <summary>
+        /// Link to Container Add()
+        /// </summary>
+        /// <param name="element">element to add to container</param>
         public void Add(House element)
         {
             this.Houses.Add(element);
         }
 
+        /// <summary>
+        /// Link to Container Get()
+        /// </summary>
+        /// <param name="index">index of whick element to get</param>
+        /// <returns>House element</returns>
         public House Get(int index)
         {
             return Houses.Get(index);
         }
 
+        /// <summary>
+        /// Link to Container Count
+        /// </summary>
+        /// <returns>Container Count element</returns>
         public int Count()
         {
             return this.Houses.Count;
         }
 
+        /// <summary>
+        /// Link to Container Contains()
+        /// </summary>
+        /// <param name="house">House element</param>
+        /// <returns>true if Container contains element</returns>
         public bool Contains(House house)
         {
             return this.Houses.Contains(house);
         }
 
+        /// <summary>
+        /// Finds the oldest house build date
+        /// </summary>
+        /// <param name="Company">Second company</param>
+        /// <returns>DateTime element of oldest house build date</returns>
         public DateTime FindOldestDate(HouseRegister Company)
         {
             DateTime date = DateTime.MaxValue;
@@ -69,6 +95,11 @@ namespace LD3.LAB
             return date;
         }
 
+        /// <summary>
+        /// Gets the oldest houses
+        /// </summary>
+        /// <param name="Company">Second Company</param>
+        /// <returns>HouseRegister of oldest houses</returns>
         public HouseRegister GetOldestHouses(HouseRegister Company)
         {
             DateTime date = this.FindOldestDate(Company);
@@ -89,6 +120,11 @@ namespace LD3.LAB
             return Found;
         }
 
+        /// <summary>
+        /// Gets streets with no repetitions
+        /// </summary>
+        /// <param name="Company">Second company</param>
+        /// <returns>List of street names</returns>
         public List<string> GetStreets(HouseRegister Company)
         {
             List<string> Streets = new List<string>();
@@ -103,10 +139,16 @@ namespace LD3.LAB
                         Streets.Add(house.Street);
                     }
                 }
+                Temp = Company;
             }
             return Streets;
         }
 
+        /// <summary>
+        /// Gets how much a specific street is repeated
+        /// </summary>
+        /// <param name="Company">Second company</param>
+        /// <returns>Array of ints with all street repetitions</returns>
         public int[] GetStreetCount(HouseRegister Company)
         {
             List<string> Streets = this.GetStreets(Company);
@@ -131,6 +173,11 @@ namespace LD3.LAB
             return streetCount;
         }
 
+        /// <summary>
+        /// Gets most sold streets
+        /// </summary>
+        /// <param name="Company">Second company</param>
+        /// <returns>List of all most sold streets</returns>
         public List<string> GetMostSoldStreets(HouseRegister Company)
         {
             List<string> Found = new List<string>();
@@ -147,6 +194,11 @@ namespace LD3.LAB
             return Found;
         }
 
+        /// <summary>
+        /// Finds all houses that appear in both companies
+        /// </summary>
+        /// <param name="Company">Second company</param>
+        /// <returns>HouseRegister of all intersecting houses</returns>
         public HouseRegister Intersects(HouseRegister Company)
         {
             HouseRegister houseRegister = new HouseRegister();
@@ -161,6 +213,13 @@ namespace LD3.LAB
             return houseRegister;
         }
 
+        /// <summary>
+        /// Gets all houses that are a certain type and are above a certain area
+        /// </summary>
+        /// <param name="type">const type</param>
+        /// <param name="area">const area</param>
+        /// <param name="Company">Second company</param>
+        /// <returns>HouseRegister of found houses</returns>
         public HouseRegister GetMHousesOverN(string type, double area, HouseRegister Company)
         {
             HouseRegister Filtered = new HouseRegister();

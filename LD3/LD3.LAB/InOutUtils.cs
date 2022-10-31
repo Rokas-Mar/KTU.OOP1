@@ -8,8 +8,16 @@ using System.Reflection.Emit;
 
 namespace LD3.LAB
 {
+    /// <summary>
+    /// Class of all In Out utilities
+    /// </summary>
     internal class InOutUtils
     {
+        /// <summary>
+        /// Reads houses
+        /// </summary>
+        /// <param name="fileName">csv file</param>
+        /// <returns>HouseRegister of all read houses</returns>
         public static HouseRegister ReadHouses(string fileName)
         {
             string[] Lines = File.ReadAllLines(fileName, Encoding.UTF8);
@@ -38,6 +46,11 @@ namespace LD3.LAB
             return houseReg;
         }
 
+        /// <summary>
+        /// Prints initial register to a txt file
+        /// </summary>
+        /// <param name="fileName">txt file</param>
+        /// <param name="Houses">HouseRegister to print</param>
         public static void PrintHousesToTxt(string fileName, HouseRegister Houses)
         {
             string[] lines = new string[Houses.Count() + 8];
@@ -57,6 +70,11 @@ namespace LD3.LAB
             File.AppendAllLines(fileName, lines, Encoding.UTF8);
         }
 
+        /// <summary>
+        /// Prinst Houses to console
+        /// </summary>
+        /// <param name="label">table label</param>
+        /// <param name="Houses">HouseRegister to print</param>
         public static void PrintHouses(string label, HouseRegister Houses)
         {
             Console.WriteLine(new String('-', 47));
@@ -76,6 +94,11 @@ namespace LD3.LAB
             Console.WriteLine(new String('-', 131));
         }
 
+        /// <summary>
+        /// Prinst all oldest houses to console
+        /// </summary>
+        /// <param name="label">teble label</param>
+        /// <param name="Houses">HouseRegister to print</param>
         public static void PrintOldestHouses(string label, HouseRegister Houses)
         {
             Console.WriteLine(new String('-', 110));
@@ -91,6 +114,12 @@ namespace LD3.LAB
             Console.WriteLine(new String('-', 110));
         }
 
+        /// <summary>
+        /// Prints all most sold streets to console
+        /// </summary>
+        /// <param name="label">table label</param>
+        /// <param name="Streets">Street list</param>
+        /// <param name="maxVal">most sold street count</param>
         public static void PrintMostSoldStreets(string label, List<string> Streets, int maxVal)
         {
             Console.WriteLine(new String('-', 47));
@@ -103,6 +132,12 @@ namespace LD3.LAB
             Console.WriteLine(new String('-', 47));
         }
 
+        /// <summary>
+        /// Prints all houses to csv file
+        /// </summary>
+        /// <param name="label">table label</param>
+        /// <param name="fileName">file to print to</param>
+        /// <param name="Houses">HouseRegister to print</param>
         public static void PrintToCSVFile(string label, string fileName, HouseRegister Houses)
         {
             string[] lines = new string[Houses.Count() + 2];

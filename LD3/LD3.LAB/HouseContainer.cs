@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace LD3.LAB
 {
+    /// <summary>
+    /// House container class
+    /// </summary>
     internal class HouseContainer
     {
         private House[] Houses;
@@ -18,6 +21,10 @@ namespace LD3.LAB
             this.Houses = new House[capasity];
         }
 
+        /// <summary>
+        /// Adds element to container
+        /// </summary>
+        /// <param name="element">House element</param>
         public void Add(House element)
         {
             if(this.Count == this.Capasity)
@@ -27,11 +34,21 @@ namespace LD3.LAB
             this.Houses[Count++] = element;
         }
 
+        /// <summary>
+        /// Gets element from container
+        /// </summary>
+        /// <param name="index">index of which element to get</param>
+        /// <returns>House element</returns>
         public House Get(int index)
         {
             return this.Houses[index];
         }
 
+        /// <summary>
+        /// Checks if Container contains element
+        /// </summary>
+        /// <param name="element">House element</param>
+        /// <returns>true if Container contains element</returns>
         public bool Contains(House element)
         {
             for(int i = 0; i < this.Count; i++)
@@ -44,6 +61,10 @@ namespace LD3.LAB
             return false;
         }
 
+        /// <summary>
+        /// Ensures Container capacity
+        /// </summary>
+        /// <param name="minCap">minimum capasity</param>
         public void EnsureCapasity(int minCap)
         {
             if(minCap > this.Capasity)
