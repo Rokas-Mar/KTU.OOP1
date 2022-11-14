@@ -1,10 +1,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  			void DuomenysInternet(Grybai & grybai)
+ Paukštis 
  PastaU RastaU
 void DuomenysInternet(Grybai & grybai)
 {
+ Televizorius 
  Pasta2 Rasta2
 ifstream fd(u2);
+ Televizorius 
  
 int ns = 0;
 bool yra = true;
@@ -13,6 +16,8 @@ fd >> pav >> tip;
 s1.Dėti (pav, tip);
 
 
+  Keliu eiluciu komentaras.
+  Papildomas tekstas.
 if(!fd.eof() && (ns - 1 < Grybai::CMax ) )
 		grybai[ns++] = s1; 
 else
@@ -28,4 +33,6 @@ void DuomenysInternet(Grybai & grybai)
 
 
 
+  Keliu eiluciu komentaras.
+  Papildomas tekstas.
 Žuvintas

@@ -11,6 +11,7 @@ namespace LD4.Individual._2
     {
         public static void Process(string fin, string fout, string finfo)
         {
+            bool foundComment = false;
             bool isComment = false;
             string newLine;
             string[] lines = File.ReadAllLines(fin, Encoding.UTF8);
@@ -23,8 +24,10 @@ namespace LD4.Individual._2
                         if(line.Length > 0)
                         {
                             newLine = line;
-                            if (TaskUtils.RemoveLineComments(line, out newLine) || TaskUtils.RemoveInlineComment(line, out newLine, ref isComment)
-                                || TaskUtils.RemoveComment(line, out newLine, ref isComment) || isComment)
+                            if (TaskUtils.RemoveLineComments(line, out newLine) 
+                                || TaskUtils.RemoveInlineComment(line, out newLine, ref isComment)
+                                || TaskUtils.RemoveComment(line, out newLine) 
+                                || isComment)
                             {
                                 writeI.WriteLine(line);
                             }

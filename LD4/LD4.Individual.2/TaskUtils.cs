@@ -27,13 +27,14 @@ namespace LD4.Individual._2
         public static bool RemoveInlineComment(string line, out string newLine, ref bool isComment)
         {
             bool foundComment = false;
+            isComment = false;
             newLine = line;
             for (int i = 0; i < newLine.Length - 1; i++)
             {
                 if (newLine[i] == '/' && newLine[i + 1] == '*')
                 {
-                    foundComment = true;
                     isComment = true;
+                    foundComment = true;
                     for(int j = i; j < line.Length - 1; j++)
                     {
                         if(newLine[j] == '*' && newLine[j + 1] == '/')
@@ -43,16 +44,16 @@ namespace LD4.Individual._2
                             break;
                         }
                     }
-                    if (isComment)
-                    {
-                        newLine = newLine.Remove(i);
-                    }
+                }
+                if(isComment)
+                {
+                    newLine = newLine.Remove(i);
                 }
             }
             return foundComment;
         }
 
-        public static bool RemoveComment(string line, out string newLine, ref bool isComment)
+        public static bool RemoveComment(string line, out string newLine)
         {
             newLine = line;
             for (int i = 0; i < line.Length - 1; i++)
@@ -60,7 +61,6 @@ namespace LD4.Individual._2
                 if (line[i] == '*' && line[i + 1] == '/')
                 {
                     newLine = line.Substring(i + 2);
-                    isComment = false;
                     return true;
                 }
             }
