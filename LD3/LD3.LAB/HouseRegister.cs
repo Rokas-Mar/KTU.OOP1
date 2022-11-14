@@ -45,11 +45,49 @@ namespace LD3.LAB
         /// <summary>
         /// Link to Container Get()
         /// </summary>
-        /// <param name="index">index of whick element to get</param>
+        /// <param name="index">index of which element to get</param>
         /// <returns>House element</returns>
         public House Get(int index)
         {
             return Houses.Get(index);
+        }
+
+        /// <summary>
+        /// Link to Container Put()
+        /// </summary>
+        /// <param name="element">element to put</param>
+        /// <param name="index">where to put the element</param>
+        public void Put(House element, int index)
+        {
+            Houses.Put(element, index);
+        }
+        
+        /// <summary>
+        /// Link to Container Insert()
+        /// </summary>
+        /// <param name="element">element to insert</param>
+        /// <param name="index">where to insert</param>
+        public void Insert(House element, int index)
+        {
+            Houses.Insert(element, index);
+        }
+
+        /// <summary>
+        /// Link to Container Remove()
+        /// </summary>
+        /// <param name="element">which element to remove</param>
+        public void Remove(House element)
+        {
+            Houses.Remove(element);
+        }
+
+        /// <summary>
+        /// Link to Container RemoveAt()
+        /// </summary>
+        /// <param name="index">which index to remove</param>
+        public void RemoveAt(int index)
+        {
+            Houses.RemoveAt(index);
         }
 
         /// <summary>
@@ -240,6 +278,14 @@ namespace LD3.LAB
                 Temp = Company;
             }
             return Filtered;
+        }
+
+        /// <summary>
+        /// Link to Container Sort()
+        /// </summary>
+        public void Sort()
+        {
+            Houses.Sort();
         }
     }
 }

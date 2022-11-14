@@ -44,24 +44,25 @@ namespace LD3.LAB
 
                 // gets and prints all houses that intersect to csv
                 HouseRegister Intersecting = Company1.Intersects(Company2);
-                if (Intersecting != null)
+                if (Intersecting.Count() != 0)
                 {
                     InOutUtils.PrintToCSVFile("Namai, parduodami abejose agenturose:", @"Kartojasi.csv", Intersecting);
                 }
                 else
                 {
-                    Console.WriteLine("Namų, parduodamų abejose agentūrose, nėra");
+                    Console.WriteLine("!!! Namų, parduodamų abejose agentūrose, nėra");
                 }
 
                 // get and prints all houses that are a certain type and area to a csv
                 HouseRegister HousesTypeOverArea = Company1.GetMHousesOverN(type, area, Company2);
-                if(HousesTypeOverArea != null)
+                HousesTypeOverArea.Sort(); // sorts by streets and house numbers
+                if(HousesTypeOverArea.Count() != 0)
                 {
                     InOutUtils.PrintToCSVFile("Namai, " + type + " tipo ir didesni už " + area, @"M100.csv", HousesTypeOverArea);
                 }
                 else
                 {
-                    Console.WriteLine("Namų, " + type + " tipo ir didesnų už " + area + "nėra");
+                    Console.WriteLine("!!! Namų, " + type + " tipo ir didesnų už " + area + "nėra");
                 }
             }
             else

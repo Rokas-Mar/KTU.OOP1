@@ -122,5 +122,22 @@ namespace LD3.LAB
         {
             return this.District == ((House)obj).District && this.Street == ((House)obj).Street && this.Number == ((House)obj).Number;
         }
+
+        /// <summary>
+        /// Compares two House elements
+        /// </summary>
+        /// <param name="other">other House element</param>
+        /// <returns>int of which house element should be higher in the list</returns>
+        public int CompareTo(House other)
+        {
+            if (this.Street == other.Street)
+            {
+                return other.Number.CompareTo(this.Number);
+            }
+            else
+            {
+                return other.Street.CompareTo(this.Street);
+            }
+        }
     }
 }

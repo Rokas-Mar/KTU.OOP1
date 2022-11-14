@@ -1,0 +1,17 @@
+C:\Users\Bruger\source\repos\LD4\LD4.Exercisess\bin\Debug\LD4.Exercisess.exe.config
+C:\Users\Bruger\source\repos\LD4\LD4.Exercisess\bin\Debug\LD4.Exercisess.exe
+C:\Users\Bruger\source\repos\LD4\LD4.Exercisess\bin\Debug\LD4.Exercisess.pdb
+C:\Users\Bruger\source\repos\LD4\LD4.Exercisess\obj\Debug\LD4.Exercises.csproj.AssemblyReference.cache
+C:\Users\Bruger\source\repos\LD4\LD4.Exercisess\obj\Debug\LD4.Exercises.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bruger\source\repos\LD4\LD4.Exercisess\obj\Debug\LD4.Exercises.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\source\repos\LD4\LD4.Exercisess\obj\Debug\LD4.Exercisess.exe
+C:\Users\Bruger\source\repos\LD4\LD4.Exercisess\obj\Debug\LD4.Exercisess.pdb
+D:\Rokas M\LD4\LD4.Exercisess\bin\Debug\LD4.Exercisess.exe.config
+D:\Rokas M\LD4\LD4.Exercisess\bin\Debug\LD4.Exercisess.exe
+D:\Rokas M\LD4\LD4.Exercisess\bin\Debug\LD4.Exercisess.pdb
+D:\Rokas M\LD4\LD4.Exercisess\obj\Debug\LD4.Exercises.csproj.AssemblyReference.cache
+D:\Rokas M\LD4\LD4.Exercisess\obj\Debug\LD4.Exercises.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\LD4\LD4.Exercisess\obj\Debug\LD4.Exercises.csproj.CoreCompileInputs.cache
+D:\Rokas M\LD4\LD4.Exercisess\obj\Debug\LD4.Exercisess.exe
+D:\Rokas M\LD4\LD4.Exercisess\obj\Debug\LD4.Exercisess.pdb
+D:\Rokas M\LD4\LD4.Exercisess\bin\Debug\Duomenys.txt

@@ -1,0 +1,9 @@
+D:\Rokas M\LD4\LD4.Exercises.3\obj\Debug\LD4.Exercises.3.csproj.AssemblyReference.cache
+D:\Rokas M\LD4\LD4.Exercises.3\obj\Debug\LD4.Exercises.3.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\LD4\LD4.Exercises.3\obj\Debug\LD4.Exercises.3.csproj.CoreCompileInputs.cache
+D:\Rokas M\LD4\LD4.Exercises.3\bin\Debug\LD4.Exercises.3.exe.config
+D:\Rokas M\LD4\LD4.Exercises.3\bin\Debug\LD4.Exercises.3.exe
+D:\Rokas M\LD4\LD4.Exercises.3\bin\Debug\LD4.Exercises.3.pdb
+D:\Rokas M\LD4\LD4.Exercises.3\obj\Debug\LD4.Exercises.3.exe
+D:\Rokas M\LD4\LD4.Exercises.3\obj\Debug\LD4.Exercises.3.pdb
+D:\Rokas M\LD4\LD4.Exercises.3\bin\Debug\Duomenys.txt
