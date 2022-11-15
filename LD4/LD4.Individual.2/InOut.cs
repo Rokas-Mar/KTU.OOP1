@@ -4,44 +4,80 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Runtime.CompilerServices;
 
 namespace LD4.Individual._2
 {
     internal class InOut
     {
-        public static void Process(string fin, string fout, string finfo)
+        public static void Process(string fin, string fout)
         {
-            bool foundComment = false;
             bool isComment = false;
-            string newLine;
+
             string[] lines = File.ReadAllLines(fin, Encoding.UTF8);
             using (var writerF = File.CreateText(fout))
             {
-                using(var writeI = File.CreateText(finfo))
-                { 
-                    foreach (string line in lines)
+                foreach(string line in lines)
+                {
+                    string text = RemoveComment(line, ref isComment);
+                    if(text != String.Empty)
                     {
-                        if(line.Length > 0)
+                        writerF.WriteLine(text);
+                    }
+                }
+            }
+        }
+
+        public static string RemoveComment(string line, ref bool isComment)
+        {
+            string newLine = line;
+
+            for(int i = 0; i < newLine.Length - 1; i++)
+            {
+                if (!isComment)
+                {
+                    if (newLine[i] == '/' && newLine[i + 1] == '/')
+                    {
+                        newLine = newLine.Remove(i);
+                        return newLine;
+                    }
+
+                    if (newLine[i] == '/' && newLine[i + 1] == '*')
+                    {
+                        isComment = true;
+
+                        for (int j = i; j < newLine.Length - 1; j++)
                         {
-                            newLine = line;
-                            if (TaskUtils.RemoveLineComments(line, out newLine) 
-                                || TaskUtils.RemoveInlineComment(line, out newLine, ref isComment)
-                                || TaskUtils.RemoveComment(line, out newLine) 
-                                || isComment)
+                            if (newLine[j] == '*' && newLine[j + 1] == '/')
                             {
-                                writeI.WriteLine(line);
-                            }
-                            if (newLine.Length > 0 & !isComment)
-                            {
-                                writerF.WriteLine(newLine);
+                                newLine = newLine.Remove(i, j - i + 2);
+                                i = 0;
+                                isComment = false;
+                                break;
                             }
                         }
-                        else 
+                        if (isComment)
                         {
-                            writerF.WriteLine(line);
+                            newLine = newLine.Remove(i);
+                            return newLine;
                         }
                     }
                 }
+                else if (newLine[i] == '*' && newLine[i + 1] == '/')
+                {
+                    isComment = false;
+                    newLine = newLine.Substring(i + 2);
+                    i = 0;
+                }
+            }
+
+            if(newLine.Length > 0 && !isComment)
+            {
+                return newLine;
+            }
+            else
+            {
+                return String.Empty;
             }
         }
     }

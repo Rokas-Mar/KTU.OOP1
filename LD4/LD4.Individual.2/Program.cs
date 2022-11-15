@@ -12,8 +12,7 @@ namespace LD4.Individual._2
         {
             const string CFd = "Duomenys.txt";
             const string CFr = "Rezultatai.txt";
-            const string CFa = "Analize.txt";
-            InOut.Process(CFd, CFr, CFa);
+            InOut.Process(CFd, CFr);
         }
     }
 }

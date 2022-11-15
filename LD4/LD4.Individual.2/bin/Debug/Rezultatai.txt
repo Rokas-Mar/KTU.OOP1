@@ -1,38 +1,30 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
  			void DuomenysInternet(Grybai & grybai)
- Paukštis 
+ Passta Masta
  PastaU RastaU
 void DuomenysInternet(Grybai & grybai)
 {
- Televizorius 
+	 
  Pasta2 Rasta2
 ifstream fd(u2);
- Televizorius 
+	Pasta3 Rasta3	 
  
 int ns = 0;
 bool yra = true;
   while(!fd.eof() && yra) { 
 fd >> pav >> tip;
 s1.Dėti (pav, tip);
-
-
-  Keliu eiluciu komentaras.
-  Papildomas tekstas.
+  
 if(!fd.eof() && (ns - 1 < Grybai::CMax ) )
 		grybai[ns++] = s1; 
 else
 yra = false;
 }
-
 	fd.close();
 grybai.Dėti(ns);
 }
 void DuomenysInternet(Grybai & grybai)
 void DuomenysInternet(Grybai & grybai) 
 	Alio  valio  Ačiū  Pabaiga
-
-
-
-  Keliu eiluciu komentaras.
-  Papildomas tekstas.
+  
 Žuvintas

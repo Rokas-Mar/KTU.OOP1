@@ -1,0 +1,9 @@
+D:\KTU OP\LD4\LD4.Exercises.5\bin\Debug\LD4.Exercises.5.exe.config
+D:\KTU OP\LD4\LD4.Exercises.5\bin\Debug\LD4.Exercises.5.exe
+D:\KTU OP\LD4\LD4.Exercises.5\bin\Debug\LD4.Exercises.5.pdb
+D:\KTU OP\LD4\LD4.Exercises.5\obj\Debug\LD4.Exercises.5.csproj.AssemblyReference.cache
+D:\KTU OP\LD4\LD4.Exercises.5\obj\Debug\LD4.Exercises.5.csproj.SuggestedBindingRedirects.cache
+D:\KTU OP\LD4\LD4.Exercises.5\obj\Debug\LD4.Exercises.5.csproj.CoreCompileInputs.cache
+D:\KTU OP\LD4\LD4.Exercises.5\obj\Debug\LD4.Exercises.5.exe
+D:\KTU OP\LD4\LD4.Exercises.5\obj\Debug\LD4.Exercises.5.pdb
+D:\KTU OP\LD4\LD4.Exercises.5\bin\Debug\Duomenys.txt

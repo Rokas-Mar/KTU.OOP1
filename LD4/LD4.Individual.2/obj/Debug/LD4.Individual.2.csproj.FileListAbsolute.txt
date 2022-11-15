@@ -16,4 +16,3 @@ D:\KTU OP\LD4\LD4.Individual.2\obj\Debug\LD4.Individual.2.csproj.SuggestedBindin
 D:\KTU OP\LD4\LD4.Individual.2\obj\Debug\LD4.Individual.2.csproj.CoreCompileInputs.cache
 D:\KTU OP\LD4\LD4.Individual.2\obj\Debug\LD4.Individual.2.exe
 D:\KTU OP\LD4\LD4.Individual.2\obj\Debug\LD4.Individual.2.pdb
-D:\KTU OP\LD4\LD4.Individual.2\bin\Debug\Rezultatai.txt
