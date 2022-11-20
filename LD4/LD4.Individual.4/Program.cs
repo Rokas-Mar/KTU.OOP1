@@ -1,4 +1,6 @@
-﻿using System;
+﻿// C++ Free Pascal
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
@@ -12,12 +14,10 @@ namespace LD4.Individual._4
         static void Main(string[] args)
         {
             const string CFd = "Duomenys.txt";
+            const string CFw = "Zodziai.txt";
             const string CFr = "Rezultatai.txt";
-            string punctuation = "[ .,!?:;()\t']+";
-            string name;
-            Console.WriteLine("Iveskite žodį");
-            name = Console.ReadLine();
-            TaskUtils.Process(CFd, CFr, punctuation, name);
+            string punctuation = "[^a-zA-ZąčęėįšųūžĄČĘĖĮŠŲŪŽ1-9]+";
+            TaskUtils.Process(CFw, CFd, CFr, punctuation);
         }
     }
 }

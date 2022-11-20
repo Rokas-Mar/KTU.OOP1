@@ -5,35 +5,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Xml;
+using System.Text.RegularExpressions;
 
 namespace LD4.Individual._4
 {
     internal class TaskUtils
     {
-        public static void Process(string fin, string fout, string punctuation, string word)
+        public static void Process(string win, string fin, string fout, string punctuation)
         {
             string[] lines = File.ReadAllLines(fin, Encoding.UTF8);
+            string[] words = File.ReadAllLines(win, Encoding.UTF8);
             using(var writer = File.CreateText(fout))
             {
-                foreach(string line in lines)
+                foreach (string line in lines)
                 {
-                    StringBuilder newLine = new StringBuilder();
-                    RemoveWord(line, punctuation, word, newLine);
+                    string newLine = RemoveWord(line, punctuation, words);
                     writer.WriteLine(newLine);
                 }
             }
         }
 
-        private static void RemoveWord(string line, string punctuation, string word, StringBuilder newLine)
+        private static string RemoveWord(string line, string punctuation, string[] words)
         {
-            int ind = line.IndexOf(word);
-            while(ind != -1)
+            foreach (string word in words)
             {
-                if (punctuation.IndexOf(line[ind + word.Length]) != -1)
-                {
-                    newLine = newLine.Remove(1, 3);
-                }
+                string newWord = Regex.Escape(word);
+                line = Regex.Replace(line, newWord + punctuation, string.Empty);
             }
+            return line;
         }
     }
 }

@@ -10,9 +10,19 @@ ifstream fd(u2);
 	Pasta3 Rasta3	 
  
 int ns = 0;
+
+
+
+
+
+
+
+
+
 bool yra = true;
-  while(!fd.eof() && yra) { 
+   zodis1  zodis2 while(!fd.eof() && yra) { 
 fd >> pav >> tip;
+
 s1.Dėti (pav, tip);
   
 if(!fd.eof() && (ns - 1 < Grybai::CMax ) )
@@ -20,11 +30,19 @@ if(!fd.eof() && (ns - 1 < Grybai::CMax ) )
 else
 yra = false;
 }
+
 	fd.close();
+
+
+
+
+
 grybai.Dėti(ns);
 }
+
 void DuomenysInternet(Grybai & grybai)
 void DuomenysInternet(Grybai & grybai) 
 	Alio  valio  Ačiū  Pabaiga
-  
+
+..,,..  
 Žuvintas

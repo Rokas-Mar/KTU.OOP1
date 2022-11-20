@@ -15,8 +15,17 @@ ifstream fd(u2);
  */ 
 // GrybasInfo s1;
 int ns = 0;
+
+
+
+
+
+
+
+
+
 bool yra = true;
-  while(!fd.eof() && yra) { // kol yra duomenų ir jie telpa į masyvą
+ /* fgh */  zodis1 /*hkj*/ zodis2 while(!fd.eof() && yra) { // kol yra duomenų ir jie telpa į masyvą
 fd >> pav >> tip;
 /* Žvaigždė */
 s1.Dėti (pav, tip);
@@ -33,6 +42,11 @@ yra = false;
 }
 
 	fd.close();
+
+
+
+
+
 grybai.Dėti(ns);
 }
 /**/
@@ -40,7 +54,7 @@ void DuomenysInternet(Grybai & grybai)
 void DuomenysInternet(Grybai & grybai) // asdasdasdasdasdasd
 	Alio /* tai yra komentras*/ valio /*tai yra kitas komentaras*/ Ačiū /*tai trečias komentaras*/ Pabaiga
 
-  /*
+..,,..  /*
 
 
   Keliu eiluciu komentaras.

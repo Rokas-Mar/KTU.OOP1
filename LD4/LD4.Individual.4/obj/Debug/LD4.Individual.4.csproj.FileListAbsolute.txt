@@ -7,3 +7,14 @@ D:\KTU OP\LD4\LD4.Individual.4\obj\Debug\LD4.Individual.4.csproj.CoreCompileInpu
 D:\KTU OP\LD4\LD4.Individual.4\obj\Debug\LD4.Individual.4.exe
 D:\KTU OP\LD4\LD4.Individual.4\obj\Debug\LD4.Individual.4.pdb
 D:\KTU OP\LD4\LD4.Individual.4\bin\Debug\Duomenys.txt
+D:\Rokas M\LD4\LD4.Individual.4\bin\Debug\Duomenys.txt
+D:\Rokas M\LD4\LD4.Individual.4\bin\Debug\LD4.Individual.4.exe.config
+D:\Rokas M\LD4\LD4.Individual.4\bin\Debug\LD4.Individual.4.exe
+D:\Rokas M\LD4\LD4.Individual.4\bin\Debug\LD4.Individual.4.pdb
+D:\Rokas M\LD4\LD4.Individual.4\obj\Debug\LD4.Individual.4.csproj.AssemblyReference.cache
+D:\Rokas M\LD4\LD4.Individual.4\obj\Debug\LD4.Individual.4.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\LD4\LD4.Individual.4\obj\Debug\LD4.Individual.4.csproj.CoreCompileInputs.cache
+D:\Rokas M\LD4\LD4.Individual.4\obj\Debug\LD4.Individual.4.exe
+D:\Rokas M\LD4\LD4.Individual.4\obj\Debug\LD4.Individual.4.pdb
+D:\KTU OP\LD4\LD4.Individual.4\bin\Debug\Zodziai.txt
+D:\Rokas M\LD4\LD4.Individual.4\bin\Debug\Zodziai.txt

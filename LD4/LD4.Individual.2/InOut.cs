@@ -20,7 +20,7 @@ namespace LD4.Individual._2
                 foreach(string line in lines)
                 {
                     string text = RemoveComment(line, ref isComment);
-                    if(text != String.Empty)
+                    if (text != null)
                     {
                         writerF.WriteLine(text);
                     }
@@ -39,6 +39,10 @@ namespace LD4.Individual._2
                     if (newLine[i] == '/' && newLine[i + 1] == '/')
                     {
                         newLine = newLine.Remove(i);
+                        if (newLine == String.Empty)
+                        {
+                            return null;
+                        }
                         return newLine;
                     }
 
@@ -59,6 +63,10 @@ namespace LD4.Individual._2
                         if (isComment)
                         {
                             newLine = newLine.Remove(i);
+                            if(newLine == String.Empty)
+                            {
+                                return null;
+                            }
                             return newLine;
                         }
                     }
@@ -68,16 +76,20 @@ namespace LD4.Individual._2
                     isComment = false;
                     newLine = newLine.Substring(i + 2);
                     i = 0;
+                    if(newLine == string.Empty)
+                    {
+                        return null;
+                    }
                 }
             }
 
-            if(newLine.Length > 0 && !isComment)
+            if (!isComment)
             {
                 return newLine;
             }
             else
             {
-                return String.Empty;
+                return null;
             }
         }
     }
