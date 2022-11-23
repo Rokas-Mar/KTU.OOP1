@@ -5,11 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Text.RegularExpressions;
-using System.Diagnostics.Tracing;
-using System.Security.Cryptography.X509Certificates;
-using System.Xml;
-using System.Runtime.CompilerServices;
-using System.Configuration;
 
 namespace LD4.LD
 {
@@ -45,7 +40,6 @@ namespace LD4.LD
                             foreach (string sentence in sentences)
                             {
                                 Sentence seperatedSentence = new Sentence(Regex.Split(sentence, "[ ]+"));
-                                seperatedSentence.RemoveEmpty();
                                 if (longestSentence < seperatedSentence)
                                 {
                                     longestIndex = index;
@@ -66,15 +60,21 @@ namespace LD4.LD
 
                     string longestSent = longestSentence.ToString();
                     int symbolCount = longestSentence.SymCount();
+                    int wordCount = longestSentence.GetWordCount();
                     writeI.WriteLine(longestSent);
                     writeI.WriteLine("Sakinio eilutė: {0}", longestIndex);
-                    writeI.WriteLine("Žodžių skaičius: {0}", longestSentence.Length);
+                    writeI.WriteLine("Žodžių skaičius: {0}", wordCount);
                     writeI.WriteLine("Symbolių skaičius: {0}", symbolCount);
                     writeI.WriteLine("Tekste esančių skaitmenų kiekis = {0}, suma = {1}", numCount, sum);
                 }
             }
         }
 
+        /// <summary>
+        /// Finds words made out of numbers only and counts them
+        /// </summary>
+        /// <param name="sentence">Sentence element</param>
+        /// <returns>count of words made of numbers only</returns>
         public static int GetNumCount(Sentence sentence)
         {
             int count = 0;
@@ -90,6 +90,11 @@ namespace LD4.LD
             return count;
         }
 
+        /// <summary>
+        /// Finds the longest line
+        /// </summary>
+        /// <param name="fin">input text</param>
+        /// <returns>Returns Sentence element containing longest line words</returns>
         public static Sentence GetLongestLine(string fin)
         {
             List<int> wordIndex = new List<int>();
@@ -112,6 +117,11 @@ namespace LD4.LD
             return longestLine;
         }
 
+        /// <summary>
+        /// Counts positions which words should be aligned with
+        /// </summary>
+        /// <param name="fin">input text</param>
+        /// <returns>List element of word length indexes</returns>
         public static List<int> GetAlignmentIndexes(string fin)
         {
             int currentLength;
@@ -128,7 +138,9 @@ namespace LD4.LD
                     Sentence currentLine = new Sentence(Regex.Split(line, "[ ]+"));
                     for (int i = 0; i < currentLine.Length; i++)
                     {
-                        currentLength = currentLine.Get(i).Length;
+                        string currentWord = currentLine.Get(i);
+                        int freq = Regex.Matches(currentWord, "[\t]").Count;
+                        currentLength = currentWord.Length + 7 * freq;
                         if (wordLengths[i] < currentLength)
                         {
                             wordLengths[i] = currentLength;
@@ -140,6 +152,12 @@ namespace LD4.LD
             return wordLengths;
         }
 
+        /// <summary>
+        /// aligns text to their indexed positions
+        /// </summary>
+        /// <param name="fin">input text</param>
+        /// <param name="fout">output text</param>
+        /// <param name="spacing">how to space words</param>
         public static void Align(string fin, string fout, string spacing)
         {
             List<int> indexes = GetAlignmentIndexes(fin);
@@ -158,7 +176,8 @@ namespace LD4.LD
                         {
                             string currentWord = currentLine.Get(i);
                             int freq = Regex.Matches(currentWord, "[\t]").Count;
-                            int currentLength = currentWord.Length + (7 * freq);
+                            int currentLength = currentWord.Length + 7 * freq;
+                            Console.WriteLine(currentWord + " " + currentLength + " " + indexes[i]);
                             while (currentLength < indexes[i])
                             {
                                 currentLine.AddSpace(i);
@@ -171,6 +190,11 @@ namespace LD4.LD
             }
         }
 
+        /// <summary>
+        /// removes symbols from the whole line, leaving just one of each kind
+        /// </summary>
+        /// <param name="line">line which will have symbols removed</param>
+        /// <returns>line with symbols apart from one of each kind removed</returns>
         public static string RemoveSymbols(string line)
         {
             while (Regex.IsMatch(line, "([^a-zA-Z1-9 ])\\1"))
@@ -180,6 +204,11 @@ namespace LD4.LD
             return line;
         }
 
+        /// <summary>
+        /// removes all symbols from word
+        /// </summary>
+        /// <param name="word">word to analyze</param>
+        /// <returns>word with deleted symbols</returns>
         public static string RemoveSym(string word)
         {
             while (Regex.IsMatch(word, "([^a-zA-Z1-9 ])"))

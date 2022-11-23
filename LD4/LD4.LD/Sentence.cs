@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using System.Linq;
 using System.Runtime.Remoting;
 using System.Text.RegularExpressions;
@@ -35,20 +36,6 @@ namespace LD4.LD
             Length++;
             this.Words[Length] = word;
         }
-        
-        /// <summary>
-        /// Removes empty words from sentence
-        /// </summary>
-        public void RemoveEmpty()
-        {
-            for(int i = 0; i < Words.Length; i++)
-            {
-                if (Words[i] == String.Empty)
-                {
-                    this.Remove(i);
-                }
-            }
-        }
 
         /// <summary>
         /// removes indexed element
@@ -56,11 +43,30 @@ namespace LD4.LD
         /// <param name="index">element index to remove</param>
         public void Remove(int index)
         {
-            for(int i = index; i < Words.Length - 1; i++)
+            for(int i = index; i < Length - 1; i++)
             {
                 Words[i] = Words[i + 1];
             }
             Length--;
+        }
+
+        /// <summary>
+        /// Gets count of only words in Sentence element
+        /// </summary>
+        /// <returns>number of words contained in Sentence element</returns>
+        public int GetWordCount()
+        {
+            int count = 0;
+
+            foreach(string word in Words)
+            {
+                if (Regex.IsMatch(word, "[a-zA-Z0-9ąčęėįšųūžĄČĘĖĮŠŲŪŽ]+"))
+                {
+                    count++;
+                }
+            }
+
+            return count;
         }
 
         /// <summary>
@@ -71,8 +77,6 @@ namespace LD4.LD
         {
             return string.Join(" ", Words).Trim().Length + 1;
         }
-
-
 
         /// <summary>
         /// Counts sum of all sentence numbers
