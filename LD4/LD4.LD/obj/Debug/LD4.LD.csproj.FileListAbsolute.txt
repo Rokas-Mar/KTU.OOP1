@@ -7,3 +7,21 @@ D:\KTU OP\LD4\LD4.LD\obj\Debug\LD4.LD.csproj.SuggestedBindingRedirects.cache
 D:\KTU OP\LD4\LD4.LD\obj\Debug\LD4.LD.csproj.CoreCompileInputs.cache
 D:\KTU OP\LD4\LD4.LD\obj\Debug\LD4.LD.exe
 D:\KTU OP\LD4\LD4.LD\obj\Debug\LD4.LD.pdb
+C:\Users\Bruger\source\repos\KTU.OP\LD4\LD4.LD\bin\Debug\Knyga.txt
+C:\Users\Bruger\source\repos\KTU.OP\LD4\LD4.LD\bin\Debug\LD4.LD.exe.config
+C:\Users\Bruger\source\repos\KTU.OP\LD4\LD4.LD\bin\Debug\LD4.LD.exe
+C:\Users\Bruger\source\repos\KTU.OP\LD4\LD4.LD\bin\Debug\LD4.LD.pdb
+C:\Users\Bruger\source\repos\KTU.OP\LD4\LD4.LD\obj\Debug\LD4.LD.csproj.AssemblyReference.cache
+C:\Users\Bruger\source\repos\KTU.OP\LD4\LD4.LD\obj\Debug\LD4.LD.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bruger\source\repos\KTU.OP\LD4\LD4.LD\obj\Debug\LD4.LD.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\source\repos\KTU.OP\LD4\LD4.LD\obj\Debug\LD4.LD.exe
+C:\Users\Bruger\source\repos\KTU.OP\LD4\LD4.LD\obj\Debug\LD4.LD.pdb
+D:\Rokas M\LD4\LD4.LD\bin\Debug\Knyga.txt
+D:\Rokas M\LD4\LD4.LD\bin\Debug\LD4.LD.exe.config
+D:\Rokas M\LD4\LD4.LD\bin\Debug\LD4.LD.exe
+D:\Rokas M\LD4\LD4.LD\bin\Debug\LD4.LD.pdb
+D:\Rokas M\LD4\LD4.LD\obj\Debug\LD4.LD.csproj.AssemblyReference.cache
+D:\Rokas M\LD4\LD4.LD\obj\Debug\LD4.LD.csproj.SuggestedBindingRedirects.cache
+D:\Rokas M\LD4\LD4.LD\obj\Debug\LD4.LD.csproj.CoreCompileInputs.cache
+D:\Rokas M\LD4\LD4.LD\obj\Debug\LD4.LD.exe
+D:\Rokas M\LD4\LD4.LD\obj\Debug\LD4.LD.pdb
