@@ -1,5 +1,5 @@
-Lorem 87 76 i ps u m
+Lorem 87, 76 i ps u m,, ,,,,,, ,,,,,,,,,,,,,,.
 Sakinio eilutė: 1
-Žodžių skaičius: 7
-Symbolių skaičius: 20
+Žodžių skaičius: 9
+Symbolių skaičius: 46
 Tekste esančių skaitmenų kiekis = 2, suma = 28

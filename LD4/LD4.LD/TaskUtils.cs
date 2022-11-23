@@ -44,7 +44,7 @@ namespace LD4.LD
 
                             foreach (string sentence in sentences)
                             {
-                                Sentence seperatedSentence = new Sentence(Regex.Split(sentence, "[^0a-zA-Z1-9ąčęėėįšųūžĄČĘĖĮŠŲŪŽ]+"));
+                                Sentence seperatedSentence = new Sentence(Regex.Split(sentence, "[ ]+"));
                                 seperatedSentence.RemoveEmpty();
                                 if (longestSentence < seperatedSentence)
                                 {
@@ -81,7 +81,7 @@ namespace LD4.LD
 
             for(int i = 0; i < sentence.Length; i++)
             {
-                string word = sentence.Get(i);
+                string word = RemoveSym(sentence.Get(i));
                 if(Regex.IsMatch(word, @"^\d+$"))
                 {
                     count++;
@@ -178,6 +178,15 @@ namespace LD4.LD
                 line = Regex.Replace(line, "([^a-zA-Z1-9 ])\\1", "$1");
             }
             return line;
+        }
+
+        public static string RemoveSym(string word)
+        {
+            while (Regex.IsMatch(word, "([^a-zA-Z1-9 ])"))
+            {
+                word = Regex.Replace(word, "([^a-zA-Z1-9 ])", string.Empty);
+            }
+            return word;
         }
     }
 }

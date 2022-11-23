@@ -69,8 +69,10 @@ namespace LD4.LD
         /// <returns>symbol count of sentence</returns>
         public int SymCount()
         {
-            return string.Join(" ", Words).Trim().Length;
+            return string.Join(" ", Words).Trim().Length + 1;
         }
+
+
 
         /// <summary>
         /// Counts sum of all sentence numbers
@@ -82,10 +84,11 @@ namespace LD4.LD
 
             foreach(string word in Words)
             {
-                if (Regex.IsMatch(word, @"^\d+$"))
+                string newWord = TaskUtils.RemoveSym(word);
+                if (Regex.IsMatch(newWord, @"^\d+$"))
                 {
-                    int num = Convert.ToInt32(word);
-                    for(int j = 0; j < word.Length; j++)
+                    int num = Convert.ToInt32(newWord);
+                    for(int j = 0; j < newWord.Length; j++)
                     {
                         sum += num % 10;
                         num /= 10;
@@ -178,7 +181,7 @@ namespace LD4.LD
         /// <returns>string element of joined words</returns>
         public override string ToString()
         {
-            return string.Join(" ", Words).Trim();
+            return string.Join(" ", Words).Trim() + ".";
         }
 
         /// <summary>
