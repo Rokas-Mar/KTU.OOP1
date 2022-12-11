@@ -8,32 +8,53 @@ namespace LD5.LD
 {
     internal abstract class RealEstate
     {
-        string City { get; set; }
-        string District { get; set; }
-        string Street { get; set; }
-        int Number { get; set; }
-        string type { get; set; }
-        DateTime BuildDate { get; set; }
-        double Area { get; set; }
-        int RoomCount { get; set; }
+        public char BuildType { get; set; }
+        public string City { get; set; }
+        public string District { get; set; }
+        public string Street { get; set; }
+        public int Number { get; set; }
+        public string Type { get; set; }
+        public DateTime BuildDate { get; set; }
+        public double Area { get; set; }
+        public int RoomCount { get; set; }
 
         public RealEstate() 
         {
 
         }
 
-        public RealEstate(string city, string district, string street, int number, string type, DateTime buildDate, double area, int roomCount)
+        public RealEstate(char buildType, string city, string district, string street, int number, string type, DateTime buildDate, double area, int roomCount)
         {
+            BuildType = buildType;
             City = city;
             District = district;
             Street = street;
             Number = number;
-            this.type = type;
+            this.Type = type;
             BuildDate = buildDate;
             Area = area;
             RoomCount = roomCount;
         }
 
-        public abstract ToString();
+        public int CompareTo(RealEstate other)
+        {
+            int result = this.Street.CompareTo(other.Street);
+            if (result == 0)
+            {
+                return other.Number.CompareTo(this.Number);
+            }
+            return result;
+        }
+
+        public override string ToString()
+        {
+            return String.Format("| {0, -5} | {1, -15} | {2, -20} | {3, -20} | {4, 10} | {5, -15} | {6, 12:yyyy/MM/dd} | {7, 10} | {8, -15} |",
+                BuildType, City, District, Street, Number, Type, BuildDate, Area, RoomCount);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.BuildType == ((RealEstate)obj).BuildType && this.City == ((RealEstate)obj).City && this.District == ((RealEstate)obj).District && this.Street == ((RealEstate)obj).Street && this.Number == ((RealEstate)obj).Number;
+        }
     }
 }

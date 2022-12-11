@@ -8,19 +8,18 @@ namespace LD5.LD
 {
     internal class Flat : RealEstate
     {
-        int Floor { get; set; }
+        public int Floor { get; set; }
 
         public Flat() { }
-        public Flat(string city, string district, string street, int number, string type, DateTime buildDate, double area, int roomCount, int floor) : 
-            base(city, district, street, number, type, buildDate, area, roomCount)
+        public Flat(char buildType, string city, string district, string street, int number, string type, DateTime buildDate, double area, int roomCount, int floor) : 
+            base(buildType, city, district, street, number, type, buildDate, area, roomCount)
         {
             Floor = floor;
         }
 
-        public abstract override string ToString()
+        public override string ToString()
         {
-            return String.Format("| {0} | {1} | {2} | {3} | {4} | {5} | {6} | {8} | {9} |",
-                );
+            return string.Format("{0} {1, 9} | {2, 13} |", base.ToString(), Floor, "");
         }
     }
 }
