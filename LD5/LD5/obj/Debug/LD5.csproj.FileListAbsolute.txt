@@ -1,0 +1,10 @@
+D:\KTU OP\LD5\LD5\bin\Debug\Animals.csv
+D:\KTU OP\LD5\LD5\bin\Debug\Vaccinations.csv
+D:\KTU OP\LD5\LD5\bin\Debug\LD5.exe.config
+D:\KTU OP\LD5\LD5\bin\Debug\LD5.exe
+D:\KTU OP\LD5\LD5\bin\Debug\LD5.pdb
+D:\KTU OP\LD5\LD5\obj\Debug\LD5.csproj.AssemblyReference.cache
+D:\KTU OP\LD5\LD5\obj\Debug\LD5.csproj.SuggestedBindingRedirects.cache
+D:\KTU OP\LD5\LD5\obj\Debug\LD5.csproj.CoreCompileInputs.cache
+D:\KTU OP\LD5\LD5\obj\Debug\LD5.exe
+D:\KTU OP\LD5\LD5\obj\Debug\LD5.pdb

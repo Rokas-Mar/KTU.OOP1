@@ -1,0 +1,10 @@
+D:\KTU OP\LD5\Individual_4\bin\Debug\Komandos.csv
+D:\KTU OP\LD5\Individual_4\bin\Debug\Zaidejai.csv
+D:\KTU OP\LD5\Individual_4\bin\Debug\Individual_4.exe.config
+D:\KTU OP\LD5\Individual_4\bin\Debug\Individual_4.exe
+D:\KTU OP\LD5\Individual_4\bin\Debug\Individual_4.pdb
+D:\KTU OP\LD5\Individual_4\obj\Debug\Individual_4.csproj.AssemblyReference.cache
+D:\KTU OP\LD5\Individual_4\obj\Debug\Individual_4.csproj.SuggestedBindingRedirects.cache
+D:\KTU OP\LD5\Individual_4\obj\Debug\Individual_4.csproj.CoreCompileInputs.cache
+D:\KTU OP\LD5\Individual_4\obj\Debug\Individual_4.exe
+D:\KTU OP\LD5\Individual_4\obj\Debug\Individual_4.pdb

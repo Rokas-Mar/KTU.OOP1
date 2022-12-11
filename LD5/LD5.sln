@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LD5", "LD5\LD5.csproj", "{81EFAFC2-B11F-4E8A-93E9-A8E16550B5B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Individual_4", "Individual_4\Individual_4.csproj", "{554AFE82-D079-4BB1-94E3-3D073B6ED12D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LD5.LD", "LD5.LD\LD5.LD.csproj", "{ED88A132-EC45-49E6-B61F-C378DBECBBF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{81EFAFC2-B11F-4E8A-93E9-A8E16550B5B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81EFAFC2-B11F-4E8A-93E9-A8E16550B5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81EFAFC2-B11F-4E8A-93E9-A8E16550B5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81EFAFC2-B11F-4E8A-93E9-A8E16550B5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{554AFE82-D079-4BB1-94E3-3D073B6ED12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554AFE82-D079-4BB1-94E3-3D073B6ED12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554AFE82-D079-4BB1-94E3-3D073B6ED12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554AFE82-D079-4BB1-94E3-3D073B6ED12D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED88A132-EC45-49E6-B61F-C378DBECBBF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED88A132-EC45-49E6-B61F-C378DBECBBF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED88A132-EC45-49E6-B61F-C378DBECBBF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED88A132-EC45-49E6-B61F-C378DBECBBF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F7433FF-17C2-4FA4-BA3C-DEDA2703BDF4}
+	EndGlobalSection
+EndGlobal

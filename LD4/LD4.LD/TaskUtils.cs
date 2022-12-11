@@ -23,8 +23,10 @@ namespace LD4.LD
                 using (var writeI = File.CreateText(fout))
                 {
                     string newSentence = "";
-                    Sentence longestSentence = new Sentence();
+                    Sentence longestSeperatedSentence = new Sentence();
+                    string longestSentence = "";
                     int index = 1;
+                    int newIndex = index;
                     int longestIndex = -1;
                     int sum = 0;
                     int numCount = 0;
@@ -35,37 +37,47 @@ namespace LD4.LD
                         if (Regex.IsMatch(line, "[.?!]"))
                         {
                             newSentence += line;
-                            string[] sentences = Regex.Split(newSentence, "[.?!]");
+                            string[] sentences = Regex.Split(newSentence, @"(?<=[.?!])");
 
                             foreach (string sentence in sentences)
                             {
-                                Sentence seperatedSentence = new Sentence(Regex.Split(sentence, "[ ]+"));
-                                if (longestSentence < seperatedSentence)
+                                Sentence seperatedSentence = new Sentence(Regex.Split(sentence, "([^a-zA-Z0-9ąčęėįšųūžĄČĘĖĮŠŲŪŽ]+)"));
+                                if (longestSeperatedSentence < seperatedSentence)
                                 {
-                                    longestIndex = index;
-                                    longestSentence = seperatedSentence;
+                                    longestIndex = newIndex;
+                                    longestSeperatedSentence = seperatedSentence;
+                                    longestSentence = sentence;
                                 }
 
                                 sum += seperatedSentence.SumSentenceNumbers();
                                 numCount += GetNumCount(seperatedSentence);
                             }
-                            index++;
                             newSentence = "";
                         }
                         else
                         {
                             newSentence += line + " ";
+                            if(line != String.Empty)
+                            {
+                                newIndex = index;
+                            }
                         }
+                        index++;
                     }
-
-                    string longestSent = longestSentence.ToString();
-                    int symbolCount = longestSentence.SymCount();
-                    int wordCount = longestSentence.GetWordCount();
-                    writeI.WriteLine(longestSent);
-                    writeI.WriteLine("Sakinio eilutė: {0}", longestIndex);
-                    writeI.WriteLine("Žodžių skaičius: {0}", wordCount);
-                    writeI.WriteLine("Symbolių skaičius: {0}", symbolCount);
-                    writeI.WriteLine("Tekste esančių skaitmenų kiekis = {0}, suma = {1}", numCount, sum);
+                    var info = new FileInfo(fin);
+                    if (info.Length > 0)
+                    {
+                        int wordCount = longestSeperatedSentence.GetWordCount();
+                        writeI.WriteLine(longestSentence);
+                        writeI.WriteLine("Sakinio eilutė: {0}", longestIndex);
+                        writeI.WriteLine("Žodžių skaičius: {0}", wordCount);
+                        writeI.WriteLine("Symbolių skaičius: {0}", longestSentence.Length);
+                        writeI.WriteLine("Tekste esančių skaičių kiekis = {0}, suma = {1}", numCount, sum);
+                    }
+                    else
+                    {
+                        writeI.WriteLine("Failas yra tuščias");
+                    }
                 }
             }
         }
@@ -168,6 +180,8 @@ namespace LD4.LD
                 using (var writeI = File.CreateText(fout))
                 {
                     String line;
+                    string punctuation = streamReader.ReadLine();
+                    Console.WriteLine(punctuation);
                     while ((line = streamReader.ReadLine()) != null)
                     {
                         line = TaskUtils.RemoveSymbols(line);
@@ -177,14 +191,13 @@ namespace LD4.LD
                             string currentWord = currentLine.Get(i);
                             int freq = Regex.Matches(currentWord, "[\t]").Count;
                             int currentLength = currentWord.Length + 7 * freq;
-                            Console.WriteLine(currentWord + " " + currentLength + " " + indexes[i]);
                             while (currentLength < indexes[i])
                             {
                                 currentLine.AddSpace(i);
                                 currentLength++;
                             }
                         }
-                        writeI.WriteLine(currentLine.ToStringAligned(spacing));
+                        writeI.WriteLine(currentLine.ToString(spacing));
                     }
                 }
             }
@@ -197,9 +210,9 @@ namespace LD4.LD
         /// <returns>line with symbols apart from one of each kind removed</returns>
         public static string RemoveSymbols(string line)
         {
-            while (Regex.IsMatch(line, "([^a-zA-Z1-9 ])\\1"))
+            while (Regex.IsMatch(line, "([^a-zA-Z0-9ąčęėįšųūžĄČĘĖĮŠŲŪŽ ])\\1"))
             {
-                line = Regex.Replace(line, "([^a-zA-Z1-9 ])\\1", "$1");
+                line = Regex.Replace(line, "([^a-zA-Z0-9ąčęėįšųūžĄČĘĖĮŠŲŪŽ ])\\1", "$1");
             }
             return line;
         }
@@ -211,9 +224,9 @@ namespace LD4.LD
         /// <returns>word with deleted symbols</returns>
         public static string RemoveSym(string word)
         {
-            while (Regex.IsMatch(word, "([^a-zA-Z1-9 ])"))
+            while (Regex.IsMatch(word, "([^a-zA-Z0-9ąčęėįšųūžĄČĘĖĮŠŲŪŽ ])"))
             {
-                word = Regex.Replace(word, "([^a-zA-Z1-9 ])", string.Empty);
+                word = Regex.Replace(word, "([^a-zA-Z0-9ąčęėįšųūžĄČĘĖĮŠŲŪŽ ])", string.Empty);
             }
             return word;
         }

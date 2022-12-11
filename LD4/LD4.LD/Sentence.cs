@@ -92,11 +92,7 @@ namespace LD4.LD
                 if (Regex.IsMatch(newWord, @"^\d+$"))
                 {
                     int num = Convert.ToInt32(newWord);
-                    for(int j = 0; j < newWord.Length; j++)
-                    {
-                        sum += num % 10;
-                        num /= 10;
-                    }
+                    sum += num;
                 }
             }
             return sum;
@@ -180,19 +176,10 @@ namespace LD4.LD
         }
 
         /// <summary>
-        /// ToString override, joins words with spaces
-        /// </summary>
-        /// <returns>string element of joined words</returns>
-        public override string ToString()
-        {
-            return string.Join(" ", Words).Trim() + ".";
-        }
-
-        /// <summary>
         /// ToString override, joins words with spacing
         /// </summary>
         /// <returns>string element of aligned words</returns>
-        public string ToStringAligned(string spacing)
+        public string ToString(string spacing)
         {
             return string.Join(spacing, Words);
         }

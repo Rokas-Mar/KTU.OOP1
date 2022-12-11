@@ -1,0 +1,9 @@
+D:\KTU OP\K2pvz\K2pvz\bin\Debug\K2pvz.exe.config
+D:\KTU OP\K2pvz\K2pvz\bin\Debug\K2pvz.exe
+D:\KTU OP\K2pvz\K2pvz\bin\Debug\K2pvz.pdb
+D:\KTU OP\K2pvz\K2pvz\obj\Debug\K2pvz.csproj.AssemblyReference.cache
+D:\KTU OP\K2pvz\K2pvz\obj\Debug\K2pvz.csproj.SuggestedBindingRedirects.cache
+D:\KTU OP\K2pvz\K2pvz\obj\Debug\K2pvz.csproj.CoreCompileInputs.cache
+D:\KTU OP\K2pvz\K2pvz\obj\Debug\K2pvz.exe
+D:\KTU OP\K2pvz\K2pvz\obj\Debug\K2pvz.pdb
+D:\KTU OP\K2pvz\K2pvz\bin\Debug\Tekstas.txt

@@ -1,5 +1,5 @@
-Lorem 87, 76 i ps u m,, ,,,,,, ,,,,,,,,,,,,,,.
-Sakinio eilutė: 2
+2004 asęėį dasd asdįįį,,, ,,, ,, asdčęė  aąčęąčę s.
+Sakinio eilutė: 1
 Žodžių skaičius: 7
-Symbolių skaičius: 46
-Tekste esančių skaitmenų kiekis = 2, suma = 28
+Symbolių skaičius: 51
+Tekste esančių skaičių kiekis = 5, suma = 10020
