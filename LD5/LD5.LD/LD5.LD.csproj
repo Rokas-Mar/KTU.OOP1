@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComparatorByArea_RoomCount.cs" />
     <Compile Include="ComparatorByStreet_Number.cs" />
     <Compile Include="Flat.cs" />
     <Compile Include="House.cs" />

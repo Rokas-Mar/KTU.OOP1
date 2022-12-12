@@ -116,5 +116,49 @@ namespace LD5.LD
 
             return Result;
         }
+
+        public static Register CollectHousesOver100(List<Register> realEstate)
+        {
+            Register Collected = new Register();
+
+            for(int i = 0; i < realEstate.Count(); i++)
+            {
+                Register temp = realEstate[i];
+                for(int j = 0; j < temp.Count(); j++)
+                {
+                    if(temp.Get(i) is House)
+                    {
+                        if (temp.Get(i).Area > 100)
+                        {
+                            Collected.Add(temp.Get(i));
+                        }
+                    }
+                }
+            }
+
+            return Collected;
+        }
+
+        public static Register CollectFlatsOver50(List<Register> realEstate)
+        {
+            Register Collected = new Register();
+
+            for (int i = 0; i < realEstate.Count(); i++)
+            {
+                Register temp = realEstate[i];
+                for (int j = 0; j < temp.Count(); j++)
+                {
+                    if (temp.Get(i) is Flat)
+                    {
+                        if (temp.Get(i).Area > 50)
+                        {
+                            Collected.Add(temp.Get(i));
+                        }
+                    }
+                }
+            }
+
+            return Collected;
+        }
     }
 }
