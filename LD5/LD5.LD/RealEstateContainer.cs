@@ -58,6 +58,18 @@ namespace LD5.LD
             return false;
         }
 
+        public int IndexSearchSorted(RealEstate element)
+        {
+            for(int i = 0; i < this.Count(); i++)
+            {
+                if (realEstates[i] == element)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         public void Sort(RealEstateComparator comparator)
         {
             bool flag = true;

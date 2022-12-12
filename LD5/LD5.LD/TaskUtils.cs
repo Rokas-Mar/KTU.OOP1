@@ -126,11 +126,11 @@ namespace LD5.LD
                 Register temp = realEstate[i];
                 for(int j = 0; j < temp.Count(); j++)
                 {
-                    if(temp.Get(i) is House)
+                    if(temp.Get(j) is House)
                     {
-                        if (temp.Get(i).Area > 100)
+                        if (temp.Get(j).Area > 100)
                         {
-                            Collected.Add(temp.Get(i));
+                            Collected.Add(temp.Get(j));
                         }
                     }
                 }
@@ -148,11 +148,11 @@ namespace LD5.LD
                 Register temp = realEstate[i];
                 for (int j = 0; j < temp.Count(); j++)
                 {
-                    if (temp.Get(i) is Flat)
+                    if (temp.Get(j) is Flat)
                     {
-                        if (temp.Get(i).Area > 50)
+                        if (temp.Get(j).Area > 50)
                         {
-                            Collected.Add(temp.Get(i));
+                            Collected.Add(temp.Get(j));
                         }
                     }
                 }
