@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace LD5.LD
 {
+    /// <summary>
+    /// RealEstate parent class
+    /// </summary>
     internal abstract class RealEstate
     {
         public char BuildType { get; set; }
@@ -36,6 +39,11 @@ namespace LD5.LD
             RoomCount = roomCount;
         }
 
+        /// <summary>
+        /// Compare method overload
+        /// </summary>
+        /// <param name="other">REalEstate element</param>
+        /// <returns>Intiger of compared elements</returns>
         public int CompareTo(RealEstate other)
         {
             int result = this.Street.CompareTo(other.Street);
@@ -46,15 +54,33 @@ namespace LD5.LD
             return result;
         }
 
+        /// <summary>
+        /// ToString overload to return formated line
+        /// </summary>
+        /// <returns>Formated line</returns>
         public override string ToString()
         {
             return String.Format("| {0, -5} | {1, -15} | {2, -20} | {3, -20} | {4, 10} | {5, -15} | {6, 12:yyyy/MM/dd} | {7, 10} | {8, -15} |",
                 BuildType, City, District, Street, Number, Type, BuildDate, Area, RoomCount);
         }
 
+        /// <summary>
+        /// Equals overload to check buildType, city, district and number
+        /// </summary>
+        /// <param name="obj">other RealEstate element</param>
+        /// <returns>true, if object details match</returns>
         public override bool Equals(object obj)
         {
             return this.BuildType == ((RealEstate)obj).BuildType && this.City == ((RealEstate)obj).City && this.District == ((RealEstate)obj).District && this.Street == ((RealEstate)obj).Street && this.Number == ((RealEstate)obj).Number;
+        }
+
+        /// <summary>
+        /// Override of getHashCode
+        /// </summary>
+        /// <returns>Base hash code</returns>
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
     }
 }

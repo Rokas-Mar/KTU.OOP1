@@ -8,3 +8,13 @@ D:\KTU OP\LD5\LD5\obj\Debug\LD5.csproj.SuggestedBindingRedirects.cache
 D:\KTU OP\LD5\LD5\obj\Debug\LD5.csproj.CoreCompileInputs.cache
 D:\KTU OP\LD5\LD5\obj\Debug\LD5.exe
 D:\KTU OP\LD5\LD5\obj\Debug\LD5.pdb
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5\bin\Debug\Animals.csv
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5\bin\Debug\Vaccinations.csv
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5\bin\Debug\LD5.exe.config
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5\bin\Debug\LD5.exe
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5\bin\Debug\LD5.pdb
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5\obj\Debug\LD5.csproj.AssemblyReference.cache
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5\obj\Debug\LD5.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5\obj\Debug\LD5.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5\obj\Debug\LD5.exe
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5\obj\Debug\LD5.pdb

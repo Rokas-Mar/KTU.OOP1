@@ -8,8 +8,16 @@ using System.Threading.Tasks;
 
 namespace LD5.LD
 {
+    /// <summary>
+    /// Task utility class
+    /// </summary>
     internal class TaskUtils
     {
+        /// <summary>
+        /// Gets all streets with no repetitions
+        /// </summary>
+        /// <param name="realEstate">Register list</param>
+        /// <returns>Street container element</returns>
         public static StreetsContainer GetStreets(List<Register> realEstate)
         {
             StreetsContainer Streets = new StreetsContainer();
@@ -34,6 +42,11 @@ namespace LD5.LD
             return Streets;
         }
 
+        /// <summary>
+        /// Gets most sold streets
+        /// </summary>
+        /// <param name="realEstate">Register List element</param>
+        /// <returns>street container element with most sold streets</returns>
         public static StreetsContainer GetMostSoldStreets(List<Register> realEstate)
         {
             StreetsContainer Streets = GetStreets(realEstate);
@@ -52,6 +65,11 @@ namespace LD5.LD
             return Filtered;
         }
 
+        /// <summary>
+        /// Gets the oldest date amongst RealEstate
+        /// </summary>
+        /// <param name="realEstate">Register List element</param>
+        /// <returns>Date of oldest house</returns>
         public static DateTime GetOldestDate(List<Register> realEstate)
         {
             DateTime minVal = DateTime.MaxValue;
@@ -64,7 +82,6 @@ namespace LD5.LD
                     if(minVal > temp.Get(i).BuildDate)
                     {
                         minVal = temp.Get(i).BuildDate;
-                        Console.WriteLine(minVal);
                     }
                 }
             }
@@ -72,6 +89,11 @@ namespace LD5.LD
             return minVal;
         }
 
+        /// <summary>
+        /// Gets oldest houses
+        /// </summary>
+        /// <param name="realEstate">Register List element</param>
+        /// <returns>Register of all oldest houses</returns>
         public static Register GetOldestHouses(List<Register> realEstate)
         {
             Register Result = new Register();
@@ -94,6 +116,11 @@ namespace LD5.LD
             return Result;
         }
 
+        /// <summary>
+        /// Gets all houses that are in multiple agencies
+        /// </summary>
+        /// <param name="realEstate">Register List element</param>
+        /// <returns>Register of intersecting RealEstate</returns>
         public static Register IntersectingEntries(List<Register> realEstate)
         {
             Register Result = new Register();
@@ -117,6 +144,11 @@ namespace LD5.LD
             return Result;
         }
 
+        /// <summary>
+        /// Gets Houses with plot over 100
+        /// </summary>
+        /// <param name="realEstate">Register List element</param>
+        /// <returns>Register of all collected houses</returns>
         public static Register CollectHousesOver100(List<Register> realEstate)
         {
             Register Collected = new Register();
@@ -139,6 +171,11 @@ namespace LD5.LD
             return Collected;
         }
 
+        /// <summary>
+        /// Gets Flats with area over 50
+        /// </summary>
+        /// <param name="realEstate">Register List element</param>
+        /// <returns>Register of collected elements</returns>
         public static Register CollectFlatsOver50(List<Register> realEstate)
         {
             Register Collected = new Register();

@@ -1,0 +1,4 @@
+Type;City;District;Street;Number;Type;Build date;Area;Room count;Heating type;Floor
+F;Vilnius;Dainava;P. Dovydaičio g.;54;Karkasinis;1930/05/03;60;4;;12
+F;Kaunas;Dainava;Seniavos pl.;83;Karkasinis;2000/05/03;60;5;;2
+F;Vilnius;Dainava;P. Dovydaičio g.;83;Murinis;2000/05/03;60;5;;2

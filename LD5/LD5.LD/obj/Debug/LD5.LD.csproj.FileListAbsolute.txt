@@ -9,3 +9,14 @@ D:\KTU OP\LD5\LD5.LD\obj\Debug\LD5.LD.pdb
 D:\KTU OP\LD5\LD5.LD\bin\Debug\Agency1.csv
 D:\KTU OP\LD5\LD5.LD\bin\Debug\Agency3.csv
 D:\KTU OP\LD5\LD5.LD\bin\Debug\Agency2.csv
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\bin\Debug\Agency3.csv
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\bin\Debug\Agency2.csv
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\bin\Debug\Agency1.csv
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\bin\Debug\LD5.LD.exe.config
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\bin\Debug\LD5.LD.exe
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\bin\Debug\LD5.LD.pdb
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\obj\Debug\LD5.LD.csproj.AssemblyReference.cache
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\obj\Debug\LD5.LD.csproj.SuggestedBindingRedirects.cache
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\obj\Debug\LD5.LD.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\obj\Debug\LD5.LD.exe
+C:\Users\Bruger\source\repos\KTU.OP\LD5\LD5.LD\obj\Debug\LD5.LD.pdb

@@ -6,10 +6,13 @@ using System.Threading.Tasks;
 
 namespace LD5.LD
 {
+    /// <summary>
+    /// Main Street class
+    /// </summary>
     internal class Street
     {
-        public string St { get; set; }
-        public int Count { get; set; }
+        public string St { get; set; } // Street name
+        public int Count { get; set; } // Street repetitions count
 
         public Street() { }
 
@@ -25,6 +28,12 @@ namespace LD5.LD
             Count = count;
         }
 
+        /// <summary>
+        /// == override
+        /// </summary>
+        /// <param name="street">Street element</param>
+        /// <param name="other">Street elememt</param>
+        /// <returns>true, if elements match</returns>
         public static bool operator ==(Street street, Street other)
         {
             if(street.St == other.St)
@@ -34,6 +43,12 @@ namespace LD5.LD
             return false;
         }
 
+        /// <summary>
+        /// != override
+        /// </summary>
+        /// <param name="street">Street element</param>
+        /// <param name="other">Street element</param>
+        /// <returns>true, if elements don't match</returns>
         public static bool operator !=(Street street, Street other)
         {
             if (street.St != other.St)
@@ -43,11 +58,20 @@ namespace LD5.LD
             return false;
         }
 
+        /// <summary>
+        /// Equals override
+        /// </summary>
+        /// <param name="obj">other object</param>
+        /// <returns>true, if object equals given object</returns>
         public override bool Equals(object obj)
         {
             return base.Equals(obj);
         }
 
+        /// <summary>
+        /// GetHashCode override
+        /// </summary>
+        /// <returns>base hash code</returns>
         public override int GetHashCode()
         {
             return base.GetHashCode();

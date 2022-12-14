@@ -7,8 +7,16 @@ using System.IO;
 
 namespace LD5.LD
 {
+    /// <summary>
+    /// Class for all In and Out methods
+    /// </summary>
     internal class InOutUtils
     {
+        /// <summary>
+        /// Reads Agency info from file
+        /// </summary>
+        /// <param name="fileName">name of file from which to read info from</param>
+        /// <returns>Register element of Agency info</returns>
         public static Register ReadAgencyInfo(string fileName)
         {
             Register realEstate = new Register();
@@ -54,6 +62,11 @@ namespace LD5.LD
             return realEstate;
         }
 
+        /// <summary>
+        /// Prints All RealEstate elements to console
+        /// </summary>
+        /// <param name="realEstate">RealEstate Ragister element</param>
+        /// <param name="label">Table name</param>
         public static void PrintRealEstate(Register realEstate, string label)
         {
             Console.WriteLine(new String('-', 178));
@@ -81,6 +94,10 @@ namespace LD5.LD
             Console.WriteLine(new String('-', 178));
         }
 
+        /// <summary>
+        /// Prints streets to console
+        /// </summary>
+        /// <param name="Streets">StreetsContainer element</param>
         public static void PrintStreets(StreetsContainer Streets)
         {
             Console.WriteLine(new String('-', 40));
@@ -93,6 +110,11 @@ namespace LD5.LD
             Console.WriteLine(new String('-', 40));
         }
 
+        /// <summary>
+        /// Prints RealEstate to CSV file
+        /// </summary>
+        /// <param name="fileName">file name to which RealEstate will be printed</param>
+        /// <param name="RealEstate">RealEstate element</param>
         public static void PrintToCSV(string fileName, Register RealEstate)
         {
             string[] lines = new string[RealEstate.Count() + 1];
@@ -114,6 +136,34 @@ namespace LD5.LD
             }
 
             File.WriteAllLines(fileName, lines);
+        }
+
+        /// <summary>
+        /// Prints a list of RealEstate without agency info
+        /// </summary>
+        /// <param name="realEstate">RealEstate element</param>
+        /// <param name="label">Table name</param>
+        public static void PrintRealEstateList(Register realEstate, string label)
+        {
+            Console.WriteLine(new String('-', 178));
+            Console.WriteLine("| {0, -174} |", label);
+            Console.WriteLine(new String('-', 178));
+            Console.WriteLine("| {0, -5} | {1, -15} | {2, -20} | {3, -20} | {4, -10} | {5, -15} | {6, -12} | {7, -10} | {8, -15} | {9, -9} | {10, -13} |",
+                "Type", "City", "District", "Street", "Number", "Build type", "Build Date", "Area", "Room Count", "Floor", "Heating type");
+            Console.WriteLine(new String('-', 178));
+            for (int i = 0; i < realEstate.Count(); i++)
+            {
+                RealEstate building = realEstate.Get(i);
+                if (building is Flat)
+                {
+                    Console.WriteLine((building as Flat).ToString());
+                }
+                else
+                {
+                    Console.WriteLine((building as House).ToString());
+                }
+            }
+            Console.WriteLine(new String('-', 178));
         }
     }
 }

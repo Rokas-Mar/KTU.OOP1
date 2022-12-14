@@ -9,8 +9,12 @@ namespace LD5.LD
 {
     internal class Program
     {
+        /// <summary>
+        /// Main method
+        /// </summary>
         static void Main(string[] args)
         {
+            // Constant input and output files
             const string InitialData1 = @"Agency1.csv";
             const string InitialData2 = @"Agency2.csv";
             const string InitialData3 = @"Agency3.csv";
@@ -18,10 +22,12 @@ namespace LD5.LD
             const string HousesFile = @"Namas100.csv";
             const string FlatsFile = @"Butas50.csv";
 
+            // Reads all agency info
             Register Agency1 = InOutUtils.ReadAgencyInfo(InitialData1);
             Register Agency2 = InOutUtils.ReadAgencyInfo(InitialData2);
             Register Agency3 = InOutUtils.ReadAgencyInfo(InitialData3);
 
+            // Process
             if (Agency1.Count() > 0 && Agency2.Count() > 0 && Agency3.Count() > 0)
             {
                 InOutUtils.PrintRealEstate(Agency1, "Pirmoji agentura");
@@ -34,7 +40,7 @@ namespace LD5.LD
                 InOutUtils.PrintStreets(Streets);
 
                 Register OldestHouses = TaskUtils.GetOldestHouses(Agencies);
-                InOutUtils.PrintRealEstate(OldestHouses, "Oldest Houses");
+                InOutUtils.PrintRealEstateList(OldestHouses, "Oldest Houses");
 
                 Register IntersectingHouses = TaskUtils.IntersectingEntries(Agencies);
                 IntersectingHouses.Sort();
