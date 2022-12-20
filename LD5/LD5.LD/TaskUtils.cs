@@ -14,32 +14,44 @@ namespace LD5.LD
     internal class TaskUtils
     {
         /// <summary>
-        /// Gets all streets with no repetitions
+        /// Gets a StreetContainer with all non-repeating streets
         /// </summary>
-        /// <param name="realEstate">Register list</param>
-        /// <returns>Street container element</returns>
-        public static StreetsContainer GetStreets(List<Register> realEstate)
+        /// <param name="Agency1">Register element</param>
+        /// <param name="Agency2">Register element</param>
+        /// <param name="Agency3">Register element</param>
+        /// <returns>StreetContainer element</returns>
+        public static StreetsContainer GetStreets(Register Agency1, Register Agency2, Register Agency3)
         {
-            StreetsContainer Streets = new StreetsContainer();
-            for (int j = 0; j < realEstate.Count; j++)
-            {
-                Register temp = realEstate[j];
+            Register Estate = new Register();
+            Register temp = Agency1;
+            StreetsContainer CollectedStreets = new StreetsContainer();
 
-                for (int i = 0; i < temp.Count(); i++)
+            for (int i = 0; i < 3; i++)
+            {
+                if (i == 1)
                 {
-                    Street street = new Street(temp.Get(i).Street);
-                    if (!Streets.Contains(street))
+                    temp = Agency2;
+                }
+                if (i == 2)
+                {
+                    temp = Agency3;
+                }
+                for(int j = 0; j < temp.Count(); j++)
+                {
+                    Street street = new Street(temp.Get(j).Street);
+                    if(!CollectedStreets.Contains(street) && !Estate.Contains(temp.Get(j)))
                     {
-                        Streets.Add(street);
+                        CollectedStreets.Add(street);
+                        Estate.Add(temp.Get(j));
                     }
-                    else
+                    else if(!Estate.Contains(temp.Get(j)))
                     {
-                        int index = Streets.IndexOf(street);
-                        Streets.AddCount(index);
+                        int index = CollectedStreets.IndexOf(street);
+                        CollectedStreets.AddCount(index);
                     }
                 }
             }
-            return Streets;
+            return CollectedStreets;
         }
 
         /// <summary>
@@ -47,9 +59,9 @@ namespace LD5.LD
         /// </summary>
         /// <param name="realEstate">Register List element</param>
         /// <returns>street container element with most sold streets</returns>
-        public static StreetsContainer GetMostSoldStreets(List<Register> realEstate)
+        public static StreetsContainer GetMostSoldStreets(Register Agency1, Register Agency2, Register Agency3)
         {
-            StreetsContainer Streets = GetStreets(realEstate);
+            StreetsContainer Streets = GetStreets(Agency1, Agency2, Agency3);
             int maxCount = Streets.GetMaxCount();
 
             StreetsContainer Filtered = new StreetsContainer();
@@ -70,13 +82,20 @@ namespace LD5.LD
         /// </summary>
         /// <param name="realEstate">Register List element</param>
         /// <returns>Date of oldest house</returns>
-        public static DateTime GetOldestDate(List<Register> realEstate)
+        public static DateTime GetOldestDate(Register Agency1, Register Agency2, Register Agency3)
         {
             DateTime minVal = DateTime.MaxValue;
-
-            for(int j = 0; j < realEstate.Count; j++)
+            Register temp = Agency3;
+            for (int j = 0; j < 3; j++)
             {
-                Register temp = realEstate[j];
+                if (j == 1)
+                {
+                    temp = Agency2;
+                }
+                if(j == 2)
+                {
+                    temp = Agency3;
+                }
                 for(int i = 0; i < temp.Count(); i++)
                 {
                     if(minVal > temp.Get(i).BuildDate)
@@ -94,19 +113,26 @@ namespace LD5.LD
         /// </summary>
         /// <param name="realEstate">Register List element</param>
         /// <returns>Register of all oldest houses</returns>
-        public static Register GetOldestHouses(List<Register> realEstate)
+        public static Register GetOldestHouses(Register Agency1, Register Agency2, Register Agency3)
         {
             Register Result = new Register();
 
-            DateTime minDate = GetOldestDate(realEstate);
-
-            for (int j = 0; j < realEstate.Count; j++)
+            DateTime minDate = GetOldestDate(Agency1, Agency2, Agency3);
+            Register temp = Agency1;
+            for (int j = 0; j < 3; j++)
             {
-                Register temp = realEstate[j];
+                if (j == 1)
+                {
+                    temp = Agency2;
+                }
+                if(j == 2)
+                {
+                    temp = Agency3;
+                }
 
                 for (int i = 0; i < temp.Count(); i++)
                 {
-                    if (temp.Get(i).BuildDate == minDate)
+                    if (temp.Get(i).BuildDate == minDate && !Result.Contains(temp.Get(i)))
                     {
                         Result.Add(temp.Get(i));
                     }
@@ -121,73 +147,45 @@ namespace LD5.LD
         /// </summary>
         /// <param name="realEstate">Register List element</param>
         /// <returns>Register of intersecting RealEstate</returns>
-        public static Register IntersectingEntries(List<Register> realEstate)
+        public static Register IntersectingEntries(Register Agency1, Register Agency2, Register Agency3)
         {
             Register Result = new Register();
 
-            for(int i = 1; i < realEstate.Count; i++)
-            {
-                for(int j = 0; j < realEstate.Count - 1; j++)
-                {
-                    if(i == j)
-                    {
-                        break;
-                    }
-                    
-                    for(int k = 0; k < realEstate[j].Count(); k++)
-                    {
-                        Result.Add(realEstate[i].Intersects(realEstate[j]));
-                    }
-                }
-            }
+            Result.Add(Agency1.Intersects(Agency2));
+            Result.Add(Agency1.Intersects(Agency3));
+            Result.Add(Agency2.Intersects(Agency3));
 
             return Result;
         }
 
         /// <summary>
-        /// Gets Houses with plot over 100
+        /// Gets Estate with area over given area
         /// </summary>
-        /// <param name="realEstate">Register List element</param>
-        /// <returns>Register of all collected houses</returns>
-        public static Register CollectHousesOver100(List<Register> realEstate)
+        /// <param name="Agency1">Regsiter element</param>
+        /// <param name="Agency2">Regsiter element</param>
+        /// <param name="Agency3">Regsiter element</param>
+        /// <param name="type">Type of estate to get</param>
+        /// <param name="area">Area to get</param>
+        /// <returns>Register of all collected Real Estate</returns>
+        public static Register CollectEstateOverArea(Register Agency1, Register Agency2, Register Agency3, Type type, double area)   
         {
             Register Collected = new Register();
-
-            for(int i = 0; i < realEstate.Count(); i++)
+            Register temp = Agency1;
+            for (int i = 0; i < 3; i++)
             {
-                Register temp = realEstate[i];
+                if (i == 1)
+                {
+                    temp = Agency2;
+                }
+                if (i == 2)
+                {
+                    temp = Agency3;
+                }
                 for(int j = 0; j < temp.Count(); j++)
                 {
-                    if(temp.Get(j) is House)
+                    if(temp.Get(j).GetType() == type)
                     {
-                        if (temp.Get(j).Area > 100)
-                        {
-                            Collected.Add(temp.Get(j));
-                        }
-                    }
-                }
-            }
-
-            return Collected;
-        }
-
-        /// <summary>
-        /// Gets Flats with area over 50
-        /// </summary>
-        /// <param name="realEstate">Register List element</param>
-        /// <returns>Register of collected elements</returns>
-        public static Register CollectFlatsOver50(List<Register> realEstate)
-        {
-            Register Collected = new Register();
-
-            for (int i = 0; i < realEstate.Count(); i++)
-            {
-                Register temp = realEstate[i];
-                for (int j = 0; j < temp.Count(); j++)
-                {
-                    if (temp.Get(j) is Flat)
-                    {
-                        if (temp.Get(j).Area > 50)
+                        if (temp.Get(j).Area > area)
                         {
                             Collected.Add(temp.Get(j));
                         }

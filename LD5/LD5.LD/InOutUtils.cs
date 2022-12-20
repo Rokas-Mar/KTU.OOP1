@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Reflection.Emit;
 
 namespace LD5.LD
 {
@@ -60,6 +61,58 @@ namespace LD5.LD
                 }
             }
             return realEstate;
+        }
+
+        /// <summary>
+        /// Writes all initial data into txt file
+        /// </summary>
+        /// <param name="fileName">Txt file</param>
+        /// <param name="Agency1">Register element</param>
+        /// <param name="Agency2">Register element</param>
+        /// <param name="Agency3">Register element</param>
+        public static void PrintInitial(string fileName, Register Agency1, Register Agency2, Register Agency3)
+        {
+            if(File.Exists(fileName))
+                File.Delete(fileName);
+
+            Register temp = Agency1;
+
+            for (int i = 0; i < 3; i++)
+            {
+                if(i == 1)
+                {
+                    temp = Agency2;
+                }
+                if(i == 2)
+                {
+                    temp = Agency3;
+                }
+                string[] lines = new string[temp.Count() + 11];
+                lines[0] = string.Format(new String('-', 178));
+                lines[1] = string.Format("| {0,-174} |", "Agency " + (i + 1));
+                lines[2] = string.Format(new String('-', 178));
+                lines[3] = string.Format($"| {temp.AgencyName,-174} |");
+                lines[4] = string.Format($"| {temp.AgencyAdress,-174} |");
+                lines[5] = string.Format($"| {temp.AgencyCell,-174} |");
+                lines[6] = string.Format(new String('-', 178));
+                lines[7] = string.Format("| {0, -5} | {1, -15} | {2, -20} | {3, -20} | {4, -10} | {5, -15} | {6, -12} | {7, -10} | {8, -15} | {9, -9} | {10, -13} |",
+                "Type", "City", "District", "Street", "Number", "Build type", "Build Date", "Area", "Room Count", "Floor", "Heating type");
+                lines[8] = string.Format(new String('-', 178));
+                for (int j = 0; j < temp.Count(); j++)
+                {
+                    RealEstate realEstate = temp.Get(j);
+                    if (realEstate is Flat)
+                    {
+                        lines[j + 9] = (realEstate as Flat).ToString();
+                    }
+                    else
+                    {
+                        lines[j + 9] = (realEstate as House).ToString();
+                    }
+                }
+                lines[temp.Count() + 9] = string.Format(new String('-', 178));
+                File.AppendAllLines(fileName, lines);
+            }
         }
 
         /// <summary>

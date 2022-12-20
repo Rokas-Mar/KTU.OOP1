@@ -46,7 +46,7 @@ namespace LD5.LD
         {
             for(int i = 0; i < StreetList.Count; i++)
             {
-                if (this.StreetList[i] == street)
+                if (this.StreetList[i].St == street.St)
                 {
                     return true;
                 }
@@ -63,7 +63,7 @@ namespace LD5.LD
         {
             for (int i = 0; i < StreetList.Count; i++)
             {
-                if (this.StreetList[i] == street)
+                if (this.StreetList[i].St == street.St)
                 {
                     return i;
                 }

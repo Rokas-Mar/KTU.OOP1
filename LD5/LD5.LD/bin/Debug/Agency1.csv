@@ -1,9 +1,5 @@
 ﻿Agency 1
 Agency street 1
 +37000000001
-F;Kaunas;Žaliakalnis;P. Dovydaičio g.;54;Mūrinis;1930-05-03;20;4;4
-H;Kaunas;Dainava;Partizanų g.;110;Mūrinis;1923-03-01;300;4;Oras oras
-F;Kaunas;Dainava;Seniavos pl.;83;Karkasinis; 2000-05-03;60;5;2
-H;Kaunas;Aleksotas;Partizanų g.;84;Karkasinis; 2000-05-03;40;5;2
-H;Vilnius;Aleksotas;Seniavos pl.;83;Karkasinis; 2000-05-03;40;5;2
-F;Vilnius;Dainava;P. Dovydaičio g.;83;Murinis; 2000-05-03;40;5;2
+F;City5;Distric6;Street1;53;Mūrinis;1953-05-03;20;4;4
+F;City5;Distric2;Street6;53;Mūrinis;1953-05-03;20;4;4

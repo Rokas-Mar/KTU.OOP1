@@ -21,6 +21,10 @@ namespace LD5.LD
             const string Intersecting = @"Kartojasi.csv";
             const string HousesFile = @"Namas100.csv";
             const string FlatsFile = @"Butas50.csv";
+            const string InitialData = @"InitialData.txt";
+
+            const double HouseArea = 100;
+            const double FlatArea = 50;
 
             // Reads all agency info
             Register Agency1 = InOutUtils.ReadAgencyInfo(InitialData1);
@@ -33,20 +37,19 @@ namespace LD5.LD
                 InOutUtils.PrintRealEstate(Agency1, "Pirmoji agentura");
                 InOutUtils.PrintRealEstate(Agency2, "Antroji agentura");
                 InOutUtils.PrintRealEstate(Agency3, "Trecioji agentura");
+                InOutUtils.PrintInitial(InitialData, Agency1, Agency2, Agency3);
 
-                List<Register> Agencies = new List<Register>() { Agency1, Agency2, Agency3 };
-
-                StreetsContainer Streets = TaskUtils.GetMostSoldStreets(Agencies);
+                StreetsContainer Streets = TaskUtils.GetMostSoldStreets(Agency1, Agency2, Agency3);
                 InOutUtils.PrintStreets(Streets);
 
-                Register OldestHouses = TaskUtils.GetOldestHouses(Agencies);
+                Register OldestHouses = TaskUtils.GetOldestHouses(Agency1, Agency2, Agency3);
                 InOutUtils.PrintRealEstateList(OldestHouses, "Oldest Houses");
 
-                Register IntersectingHouses = TaskUtils.IntersectingEntries(Agencies);
+                Register IntersectingHouses = TaskUtils.IntersectingEntries(Agency1, Agency2, Agency3);
                 IntersectingHouses.Sort();
                 InOutUtils.PrintToCSV(Intersecting, IntersectingHouses);
 
-                Register HousesOver100 = TaskUtils.CollectHousesOver100(Agencies);
+                Register HousesOver100 = TaskUtils.CollectEstateOverArea(Agency1, Agency2, Agency3, typeof(House), HouseArea);
                 if (HousesOver100.Count() > 0)
                 {
                     HousesOver100.Sort(new ComparatorByArea_RoomCount());
@@ -58,7 +61,7 @@ namespace LD5.LD
                     File.WriteAllText(HousesFile, "");
                 }
 
-                Register FlatsOver50 = TaskUtils.CollectFlatsOver50(Agencies);
+                Register FlatsOver50 = TaskUtils.CollectEstateOverArea(Agency1, Agency2, Agency3, typeof(Flat), FlatArea);
                 if (FlatsOver50.Count() > 0)
                 {
                     FlatsOver50.Sort(new ComparatorByArea_RoomCount());
