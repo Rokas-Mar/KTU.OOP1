@@ -57,8 +57,10 @@ namespace LD5.LD
         /// <summary>
         /// Gets most sold streets
         /// </summary>
-        /// <param name="realEstate">Register List element</param>
-        /// <returns>street container element with most sold streets</returns>
+        /// <param name="Agency1">Register element</param>
+        /// <param name="Agency2">Register element</param>
+        /// <param name="Agency3">Register element</param>
+        /// <returns>StreetContainer element with most sold streets</returns>
         public static StreetsContainer GetMostSoldStreets(Register Agency1, Register Agency2, Register Agency3)
         {
             StreetsContainer Streets = GetStreets(Agency1, Agency2, Agency3);
@@ -78,14 +80,16 @@ namespace LD5.LD
         }
 
         /// <summary>
-        /// Gets the oldest date amongst RealEstate
+        /// Finds the oldest date of all Agencies
         /// </summary>
-        /// <param name="realEstate">Register List element</param>
-        /// <returns>Date of oldest house</returns>
+        /// <param name="Agency1">Register element</param>
+        /// <param name="Agency2">Register element</param>
+        /// <param name="Agency3">Register element</param>
+        /// <returns>DateTime element of oldest date</returns>
         public static DateTime GetOldestDate(Register Agency1, Register Agency2, Register Agency3)
         {
             DateTime minVal = DateTime.MaxValue;
-            Register temp = Agency3;
+            Register temp = Agency1;
             for (int j = 0; j < 3; j++)
             {
                 if (j == 1)
@@ -109,10 +113,12 @@ namespace LD5.LD
         }
 
         /// <summary>
-        /// Gets oldest houses
+        /// Gets oldest houses of all agencies
         /// </summary>
-        /// <param name="realEstate">Register List element</param>
-        /// <returns>Register of all oldest houses</returns>
+        /// <param name="Agency1">Register element</param>
+        /// <param name="Agency2">Register element</param>
+        /// <param name="Agency3">Register element</param>
+        /// <returns>Register element of oldest houses</returns>
         public static Register GetOldestHouses(Register Agency1, Register Agency2, Register Agency3)
         {
             Register Result = new Register();
@@ -143,10 +149,12 @@ namespace LD5.LD
         }
 
         /// <summary>
-        /// Gets all houses that are in multiple agencies
+        /// Gets all intersecting enitries
         /// </summary>
-        /// <param name="realEstate">Register List element</param>
-        /// <returns>Register of intersecting RealEstate</returns>
+        /// <param name="Agency1">Register element</param>
+        /// <param name="Agency2">Register element</param>
+        /// <param name="Agency3">Register element</param>
+        /// <returns>Register element containing all intersecting buildings</returns>
         public static Register IntersectingEntries(Register Agency1, Register Agency2, Register Agency3)
         {
             Register Result = new Register();

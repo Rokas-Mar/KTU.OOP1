@@ -105,7 +105,7 @@ namespace LD5.LD
                 RealEstate house = Agency.Get(i);
                 if (this.realEstates.Contains(house))
                 {
-                    houseRegister.Add(Agency.Get(i));
+                    houseRegister.Add(house);
                 }
             }
             return houseRegister;

@@ -31,24 +31,36 @@ namespace LD5.LD
             Register Agency2 = InOutUtils.ReadAgencyInfo(InitialData2);
             Register Agency3 = InOutUtils.ReadAgencyInfo(InitialData3);
 
-            // Process
-            if (Agency1.Count() > 0 && Agency2.Count() > 0 && Agency3.Count() > 0)
+            // Process if at least one Agency has elements
+            if (Agency1.Count() > 0 || Agency2.Count() > 0 || Agency3.Count() > 0)
             {
+                // Prints all agency info to console and txt file
                 InOutUtils.PrintRealEstate(Agency1, "Pirmoji agentura");
                 InOutUtils.PrintRealEstate(Agency2, "Antroji agentura");
                 InOutUtils.PrintRealEstate(Agency3, "Trecioji agentura");
                 InOutUtils.PrintInitial(InitialData, Agency1, Agency2, Agency3);
 
+                // Gets most sold streets and prints them
                 StreetsContainer Streets = TaskUtils.GetMostSoldStreets(Agency1, Agency2, Agency3);
                 InOutUtils.PrintStreets(Streets);
 
+                // Gets oldest houses and prints them
                 Register OldestHouses = TaskUtils.GetOldestHouses(Agency1, Agency2, Agency3);
                 InOutUtils.PrintRealEstateList(OldestHouses, "Oldest Houses");
 
+                // Gets all intersecting houses, sorts them and prints them to csv file
                 Register IntersectingHouses = TaskUtils.IntersectingEntries(Agency1, Agency2, Agency3);
-                IntersectingHouses.Sort();
-                InOutUtils.PrintToCSV(Intersecting, IntersectingHouses);
+                if (IntersectingHouses.Count() > 0)
+                {
+                    IntersectingHouses.Sort();
+                    InOutUtils.PrintToCSV(Intersecting, IntersectingHouses);
+                }
+                else
+                {
+                    Console.WriteLine("No intersecting real estate found");
+                }
 
+                // Gets real estate that is House type and over HouseArea area
                 Register HousesOver100 = TaskUtils.CollectEstateOverArea(Agency1, Agency2, Agency3, typeof(House), HouseArea);
                 if (HousesOver100.Count() > 0)
                 {
@@ -61,6 +73,7 @@ namespace LD5.LD
                     File.WriteAllText(HousesFile, "");
                 }
 
+                // Gets real estate that is Flat type and over FlatArea area
                 Register FlatsOver50 = TaskUtils.CollectEstateOverArea(Agency1, Agency2, Agency3, typeof(Flat), FlatArea);
                 if (FlatsOver50.Count() > 0)
                 {

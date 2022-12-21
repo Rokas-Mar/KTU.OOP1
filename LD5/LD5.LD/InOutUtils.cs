@@ -22,42 +22,45 @@ namespace LD5.LD
         {
             Register realEstate = new Register();
             string[] Lines = File.ReadAllLines(fileName);
-            realEstate.AgencyName = Lines[0];
-            realEstate.AgencyAdress = Lines[1];
-            realEstate.AgencyCell = Lines[2];
-            for(int i = 0; i < Lines.Length - 3; i++)
+            if (Lines.Length > 0)
             {
-                string[] parts = Lines[i + 3].Split(';');
-                char houseType = Convert.ToChar(parts[0]);
-                string city = parts[1];
-                string district = parts[2];
-                string street = parts[3];
-                int number = Convert.ToInt32(parts[4]);
-                string type = parts[5];
-                DateTime buildDate = Convert.ToDateTime(parts[6]);
-                double area = Convert.ToDouble(parts[7]);
-                int roomCount = Convert.ToInt32(parts[8]);
-
-                switch(houseType)
+                realEstate.AgencyName = Lines[0];
+                realEstate.AgencyAdress = Lines[1];
+                realEstate.AgencyCell = Lines[2];
+                for (int i = 0; i < Lines.Length - 3; i++)
                 {
-                    case 'F':
-                        int floor = Convert.ToInt32(parts[9]);
-                        Flat flat = new Flat(houseType, city, district, street, number, type, buildDate, area, roomCount, floor);
-                        if (!realEstate.Contains(flat))
-                        {
-                            realEstate.Add(flat);
-                        }
-                        break;
-                    case 'H':
-                        string heating = parts[9];
-                        House house = new House(houseType, city, district, street, number, type, buildDate, area, roomCount, heating);
-                        if (!realEstate.Contains(house))
-                        {
-                            realEstate.Add(house);
-                        }
-                        break;
-                    default:
-                        break;
+                    string[] parts = Lines[i + 3].Split(';');
+                    char houseType = Convert.ToChar(parts[0]);
+                    string city = parts[1];
+                    string district = parts[2];
+                    string street = parts[3];
+                    int number = Convert.ToInt32(parts[4]);
+                    string type = parts[5];
+                    DateTime buildDate = Convert.ToDateTime(parts[6]);
+                    double area = Convert.ToDouble(parts[7]);
+                    int roomCount = Convert.ToInt32(parts[8]);
+
+                    switch (houseType)
+                    {
+                        case 'F':
+                            int floor = Convert.ToInt32(parts[9]);
+                            Flat flat = new Flat(houseType, city, district, street, number, type, buildDate, area, roomCount, floor);
+                            if (!realEstate.Contains(flat))
+                            {
+                                realEstate.Add(flat);
+                            }
+                            break;
+                        case 'H':
+                            string heating = parts[9];
+                            House house = new House(houseType, city, district, street, number, type, buildDate, area, roomCount, heating);
+                            if (!realEstate.Contains(house))
+                            {
+                                realEstate.Add(house);
+                            }
+                            break;
+                        default:
+                            break;
+                    }
                 }
             }
             return realEstate;
