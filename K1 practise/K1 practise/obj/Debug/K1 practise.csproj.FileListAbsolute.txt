@@ -1,9 +1,0 @@
-D:\KTU OP\K1 practise\K1 practise\bin\Debug\Duomenys.txt
-D:\KTU OP\K1 practise\K1 practise\bin\Debug\K1 practise.exe.config
-D:\KTU OP\K1 practise\K1 practise\bin\Debug\K1 practise.exe
-D:\KTU OP\K1 practise\K1 practise\bin\Debug\K1 practise.pdb
-D:\KTU OP\K1 practise\K1 practise\obj\Debug\K1 practise.csproj.AssemblyReference.cache
-D:\KTU OP\K1 practise\K1 practise\obj\Debug\K1 practise.csproj.SuggestedBindingRedirects.cache
-D:\KTU OP\K1 practise\K1 practise\obj\Debug\K1 practise.csproj.CoreCompileInputs.cache
-D:\KTU OP\K1 practise\K1 practise\obj\Debug\K1 practise.exe
-D:\KTU OP\K1 practise\K1 practise\obj\Debug\K1 practise.pdb
